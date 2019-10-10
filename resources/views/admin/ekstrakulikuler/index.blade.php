@@ -23,7 +23,7 @@
     <link href="{{ asset('asset-admin/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('asset-admin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('asset-admin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}" rel="stylesheet">
-
+   
     <!-- Custom Theme Style -->
     <link href="{{ asset('asset-admin/build/css/custom.min.css') }}" rel="stylesheet">
   </head>
@@ -68,7 +68,7 @@
                   <li><a href="/artikel"><i class="fa fa-desktop"></i> Artikel </span></a>
                     <ul class="nav child_menu"></ul>
                   </li>
-                  <li><a href="/ekstrakurikuler"><i class="fa fa-table"></i> Ekstrakurikuler</a>
+                  <li><a href="{{ route('eskul.index') }}"><i class="fa fa-table"></i> Ekstrakurikuler</a>
                     <ul class="nav child_menu"></ul>
                   </li>
                     <ul class="nav child_menu">
@@ -105,66 +105,6 @@
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="/login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/pi.jpeg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
                   </ul>
                 </li>
               </ul>
@@ -227,14 +167,14 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action text-center">
+                    <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="text-align:center;">
                       <thead>
                         <tr>
                           <th>No.</th>
-                          <th>Nama</th>
+                          <th width="120px">Nama</th>
                           <th>Kelas</th>
-                          <th>Jurusan</th>
-                          <th>Nomor Telepon</th>
+                          <th width="180px">Jurusan</th>
+                          <th width="120px">Nomor Telepon</th>
                           <th>Alasan</th>
                           <th>Pengaturan</th>
                         </tr>

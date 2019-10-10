@@ -37,7 +37,7 @@
 			<header class="default-header">
 					<nav class="navbar navbar-expand-lg navbar-light">
 						<div class="container">
-							<a class="navbar-brand" href="index.html" style="font-weight: 500;"><img src="/images/pi.jpeg" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
+							<a class="navbar-brand" href="/" style="font-weight: 500;"><img src="/images/pi.jpeg" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 							<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 								<ul class="navbar-nav">

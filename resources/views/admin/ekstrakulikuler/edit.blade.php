@@ -42,7 +42,7 @@
             <div class="page-title">
               <div class="title_left">
                 <a href="/artikel"><i class="fa fa-arrow-left" style="font-size:30px;"></i></a>
-                <h3>Edit Data Jurusan</h3>
+                <h3>Edit Data Daftar Ekstrakulikuler</h3>
               </div>
 
               <div class="title_right">
@@ -70,20 +70,50 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <form action="{{ route('jurusan.update' ,$jurusan->id) }}" method="post" class="form-horizontal form-label-left">
+                    <form action="{{ route('eskul.update' ,$daftareskul->id) }}" method="post" class="form-horizontal form-label-left">
                       @method('PUT')
                       @csrf
                       <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                         
-                        <label>Jurusan</label>
-                        <input type="text" placeholder="Masukkan Jurusan" name="nama_jurusan" class="form-control" value="{{ $jurusan->nama_jurusan }}">
+                        <label>Nama lengkap</label>
+                        <input type="text" placeholder="Masukan Nama" name="nama" class="form-control" value="{{ $daftareskul->nama }}">
                         <span style="transform: translate(4px, 21px);" class="fa fa-space-shuttle form-control-feedback right" aria-hidden="true"></span>
-                        @if($errors->has('nama_jurusan'))
+                        @if($errors->has('nama'))
                           <div class="alert alert-danger">
-                              <strong>{{ $errors->first('nama_jurusan') }}</strong>
+                              <strong>{{ $errors->first('nama') }}</strong>
+                          </div>
+                        @endif
+                        <label>Kelas</label>
+                        <input type="text" placeholder="Masukkan Kelas" name="kelas" class="form-control" value="{{ $daftareskul->kelas }}">
+                        <span style="transform: translate(4px, 21px);" class="fa fa-space-shuttle form-control-feedback right" aria-hidden="true"></span>
+                        @if($errors->has('kelas'))
+                          <div class="alert alert-danger">
+                              <strong>{{ $errors->first('kelas') }}</strong>
+                          </div>
+                        @endif
+                        <label>Kelas</label>
+                        <select name="jurusan_id" class="form-control">
+                          @foreach ($jurusan as $item)
+                            @if($item->id==$daftareskul->jurusan_id)
+                              <option value={{$item->id}} selected >{{$item->nama_jurusan}}</option>
+                            @else              
+                              <option value={{$item->id}}>{{$item->nama_jurusan}}</option>
+                            @endif
+                          @endforeach
+                      </select>
+                      <label>Nomer Telepone</label>
+                        <input type="text" placeholder="Masukkan Nomer" name="nomer_telepone" class="form-control" value="{{ $daftareskul->nomer_telepone }}">
+                        <span style="transform: translate(4px, 21px);" class="fa fa-space-shuttle form-control-feedback right" aria-hidden="true"></span>
+                        @if($errors->has('kelas'))
+                          <div class="alert alert-danger">
+                              <strong>{{ $errors->first('kelas') }}</strong>
                           </div>
                         @endif
                       </div>
+                      <label>Alasan</label>
+                      <textarea name="alasan" class="form-control">
+                        {!! $daftareskul->alasan !!}
+                      </textarea>
                       <div class="form-group">
                       <div class="x_content">     
                         <br />

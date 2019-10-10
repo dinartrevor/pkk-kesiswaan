@@ -23,7 +23,11 @@
     <link href="{{ asset('asset-admin/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('asset-admin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('asset-admin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.5/bootstrap-confirmation.min.js"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Custom Theme Style -->
     <link href="{{ asset('asset-admin/build/css/custom.min.css') }}" rel="stylesheet">
   </head>
@@ -163,7 +167,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action text-center">
+                    <table id="datatable" class="table table-striped table-bordered bulk_action text-center">
                       <thead>
                         <tr>
                           <th>No.</th>

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Jurusan;
-use App\Daftareskul;
-class DaftareskulController extends Controller
+
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,7 @@ class DaftareskulController extends Controller
      */
     public function index()
     {
-        $jurusan=jurusan::select('id','nama_jurusan')->get();
-        $daftareskul=Daftareskul::all();
-
-        return view('admin.ekstrakulikuler.index', compact('daftareskul', $daftareskul));
+        //
     }
 
     /**
@@ -27,9 +23,7 @@ class DaftareskulController extends Controller
      */
     public function create()
     {
-        $jurusan=jurusan::select('id','nama_jurusan')->get();
-        
-        return view('user.detail_artikel',compact('jurusan', $jurusan));
+        //
     }
 
     /**
@@ -40,16 +34,7 @@ class DaftareskulController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'nama'=>'required',
-            'kelas'=>'required',
-            'jurusan_id'=>'required',
-            'nomer_telepone'=>'required',
-            'alasan'=>'required',
-            
-        ]);
-        Daftareskul::create($request->all());
-       return redirect()->route('eskul.create')->with('success', 'Pesan Telah Terkirim.');;
+        //
     }
 
     /**
@@ -71,9 +56,7 @@ class DaftareskulController extends Controller
      */
     public function edit($id)
     {
-        $daftareskul= Daftareskul::find($id);
-        $jurusan=Jurusan::select('id','nama_jurusan')->get();
-        return view('admin.ekstrakulikuler.edit', compact('daftareskul','jurusan'));
+        //
     }
 
     /**
@@ -85,9 +68,7 @@ class DaftareskulController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $daftareskul= Daftareskul::find($id);
-        $daftareskul->update($request->all());
-        return redirect()->route('eskul.index');
+        //
     }
 
     /**
@@ -98,11 +79,6 @@ class DaftareskulController extends Controller
      */
     public function destroy($id)
     {
-        $daftareskul= Daftareskul::find($id);
-        if(!$daftareskul){
-            return redirect()->back();
-        }
-        $daftareskul->delete();
-        return redirect()->route('eskul.index');
+        //
     }
 }

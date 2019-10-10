@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="/asset-user/css/owl.carousel.css">
   <link rel="stylesheet" href="/asset-user/css/main.css">
   <link rel="stylesheet" href="/asset-user/css/style.css">
-  <link rel="icon" href="images/pi.jpeg" type="image/icon"/>
+  <link rel="icon" href="/images/pi.jpeg" type="image/icon"/>
 </head>
   <body>
 
@@ -31,15 +31,15 @@
     <header class="default-header">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html" style="font-weight: 500;"><img src="img/pi.jpeg" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
+          <a class="navbar-brand" href="/" style="font-weight: 500;"><img src="/images/pi.jpeg" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
               <ul class="navbar-nav">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="acara.html">Acara</a></li>
-                <li><a href="ekstrakulikuler.html">Ekstrakurikuler</a></li>
-                <li><a href="tentang.html">Tentang</a></li>
-                <li><a class= " navbar-btn" href="login.html" style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/events">Acara</a></li>
+							<li><a href="/ekskul">Ekstrakurikuler</a></li>
+                <li><a href="/tentang">Tentang</a></li>
+                <li><a class= " navbar-btn" href="/login" style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a>
                 </li>
               </ul>
             </div>                        
@@ -91,9 +91,7 @@
 										<button type="button" class="close" data-dismiss="alert">×</button> 
 											<strong>{{ $message }}</strong>
 									</div>
-								@endif
-						
-						
+									@endif						
 									@method('POST')
 									@csrf
 									<div class="form-group">
@@ -113,7 +111,7 @@
                     @endif
 										<label style="color: rgb(0, 0, 0);">Jurusan</label>
 										<select id="jurusan" name="jurusan_id" class="form-control">
-											<option>pilih</option>
+											<option>--  Pilih Jurusan --</option>
 											@foreach($jurusan as $d)
 												<option value="{{ $d->id }}">{{ $d->nama_jurusan }}</option>
 											@endforeach

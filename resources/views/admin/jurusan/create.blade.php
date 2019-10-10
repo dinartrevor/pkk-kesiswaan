@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="icon" href="{{ asset('asset-admin/images/pi.jpeg') }}" type="image/icon" />
-    <title>Tambah Artikel - Web Kesiswaan</title>
+    <title>Tambah Jurusan - Web Kesiswaan</title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('asset-admin/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -70,18 +70,24 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <form action="{{ route('jurusan.store') }}" method="post" class="form-horizontal form-label-left">
+                    <form action="{{ route('jurusan.store') }}" method="post" class="form-horizontal form-label-left"  onsubmit="return validasi()>
+                      @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-block">
+                          <button type="button" class="close" data-dismiss="alert">×</button> 
+                            <strong>{{ $message }}</strong>
+                        </div>
+									    @endif						
                       @method('POST')
                       @csrf
                       <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                          @if($errors->has('nama_jurusan'))
-                          <div class="alert alert-danger">
-                              <strong>{{ $errors->first('nama_jurusan') }}</strong>
-                          </div>
-                        @endif
                         <label>Jurusan</label>
                         <input type="text" placeholder="Masukkan Jurusan" name="nama_jurusan" class="form-control">
                         <span style="transform: translate(4px, 21px);" class="fa fa-space-shuttle form-control-feedback right" aria-hidden="true"></span>
+                        @if($errors->has('nama_jurusan'))
+                          <div class="alert alert-danger">
+                            <strong>{{ $errors->first('nama_jurusan') }}</strong>
+                          </div>
+                        @endif
                       </div>
                       <div class="form-group">
                       <div class="x_content">     
@@ -92,7 +98,7 @@
                       <div style="transform: translate(15%, -60%);" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                         
                         <button class="btn btn-primary" type="reset">Reset</button>
-                        <button class="btn btn-success" type="submit">Submit</button>
+                        <button class="btn btn-success" type="submit"">Submit</button>
                       </div>
                     </div>
                   </div>
@@ -144,6 +150,12 @@
     <script src="{{ asset('asset-admin/vendors/starrr/dist/starrr.js') }}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('asset-admin/build/js/custom.min.js') }}"></script>
+<script>
+function validasi() {
+   return confirm('Yakin Untuk Menambah?');
 
+  
+}
+</script>
   </body>
 </html>

@@ -21,7 +21,7 @@
 			<header class="default-header">
 				<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
-						<a class="navbar-brand" href="index.html" style="font-weight: 500;"><img src="{{ asset('images/pi.jpeg') }}" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
+						<a class="navbar-brand" href="/" style="font-weight: 500;"><img src="{{ asset('images/pi.jpeg') }}" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 						<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							<ul class="navbar-nav">
@@ -176,7 +176,7 @@
 							</p>
 						</div>
 						<div class="col-lg-3 col-md-6 single-fashion">
-							<a href="marching-band.html"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
+							<a href="{{route('eskul.create')}}"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
 						<h4 style="margin-top: 15px;"><a href="{{route('eskul.create')}}">MARCHING BAND</a></h4>
 							<p>
 								Tukang Tatalu
@@ -208,12 +208,12 @@
 						<div class="row">
 							<div class="col-lg-6  col-md-12">
 								<div class="single-footer-widget">
-									<h6>SMK PRAKARYA INTERNASIONAL</h6>
+								 	<a href="/"><h6>SMK PRAKARYA INTERNASIONAL</h6></a>
 									<ul class="footer-nav">
-										<li><a href="#">Acara</a></li>
-										<li><a href="#">Ekstrakurikuler</a></li>
-										<li><a href="#">Tentang</a></li>
-										<li><a href="/">login</a></li>
+										<li><a href="/events">Acara</a></li>
+										<li><a href="/ekskul">Ekstrakurikuler</a></li>
+										<li><a href="/tentang">Tentang</a></li>
+										<li><a href="/login">login</a></li>
 									</ul>
 								</div>
 							</div>
@@ -223,7 +223,7 @@
 									<ul class="footer-nav">
 										<li><a href="#">Pramuka</a></li>
 										<li><a href="#">Osis</a></li>
-										<li><a href="">Marching Band</a></li>
+									<li><a href="{{route('eskul.create')}}">Marching Band</a></li>
 										<li><a href="#">Paskibra</a></li>
 									</ul>
 								</div>
