@@ -86,13 +86,31 @@
 							<div class="single_widget search_widget">
 								<h3 class="text-center">Form Pendaftaran Ekstakulikuler</h3><br>
 								<form action="{{ route('eskul.store')}} "method="POST">
+									@if ($message = Session::get('success'))
+									<div class="alert alert-success alert-block">
+										<button type="button" class="close" data-dismiss="alert">×</button> 
+											<strong>{{ $message }}</strong>
+									</div>
+								@endif
+						
+						
 									@method('POST')
 									@csrf
 									<div class="form-group">
 										<label style="color: rgb(0, 0, 0);">Nama Lengkap</label>
 										<input type="text" name="nama" class="form-control" autocomplete="off" placeholder="Masukkan Nama" ><br>
+										@if($errors->has('nama'))
+											<div class="alert alert-danger">
+													<strong>{{ $errors->first('nama') }}</strong>
+											</div>
+                    @endif
 										<label style="color: rgb(0, 0, 0);">Kelas</label>
 										<input type="text" name="kelas" class="form-control"  autocomplete="off" placeholder="Masukkan Kelas" ><br>
+										@if($errors->has('kelas'))
+											<div class="alert alert-danger">
+													<strong>{{ $errors->first('kelas') }}</strong>
+											</div>
+                    @endif
 										<label style="color: rgb(0, 0, 0);">Jurusan</label>
 										<select id="jurusan" name="jurusan_id" class="form-control">
 											<option>pilih</option>
@@ -102,8 +120,18 @@
 										</select><br>
 										<label style="color: rgb(0, 0, 0);">Nomor Telepon</label>
 										<input type="text"name="nomer_telepone" class="form-control" autocomplete="off" id="nomer" placeholder="Masukkan Nomor Telepon"><br>
+										@if($errors->has('nomer_telepone'))
+											<div class="alert alert-danger">
+													<strong>{{ $errors->first('nomer_telepone') }}</strong>
+											</div>
+										@endif
 										<label style="color: rgb(0, 0, 0);">Alasan</label>
-										<textarea name="alasan" id="" cols="10" rows="10" placeholder="Tulis Alasan" class="form-control"></textarea>                            
+										<textarea name="alasan" id="" cols="10" rows="10" placeholder="Tulis Alasan" class="form-control"></textarea>     
+										@if($errors->has('alasan'))
+											<div class="alert alert-danger">
+													<strong>{{ $errors->first('alasan') }}</strong>
+											</div>
+										@endif                      
 									</div> 
 									<button type="submit" class="primary-btn">Kirim<span><i class="fa fa-paper-plane" style="color: white;"></i></span></button>  
 								</form>

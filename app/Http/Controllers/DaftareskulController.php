@@ -40,9 +40,16 @@ class DaftareskulController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $this->validate($request,[
+            'nama'=>'required',
+            'kelas'=>'required',
+            'jurusan_id'=>'required',
+            'nomer_telepone'=>'required',
+            'alasan'=>'required',
+            
+        ]);
         Daftareskul::create($request->all());
-       return redirect()->route('eskul.create');
+       return redirect()->route('eskul.create')->with('success', 'Pesan Telah Terkirim.');;
     }
 
     /**
