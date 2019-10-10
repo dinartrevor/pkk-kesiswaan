@@ -27,8 +27,9 @@
 							<ul class="navbar-nav">
 								<li class="active"><a href="#home">Home</a></li>
 								<li><a href="/events">Events</a></li>
-								<li><a href="/eskul">Extracuricular</a></li>
+								<li><a href="/ekskul">Extracuricular</a></li>
 								<li><a href="/tentang">About</a></li>
+								<li><a href="#">Forum</a></li>
 								<li class="active"><a class= " navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
 							</ul>
 						</div>						
@@ -176,7 +177,7 @@
 						</div>
 						<div class="col-lg-3 col-md-6 single-fashion">
 							<a href="marching-band.html"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
-							<h4 style="margin-top: 15px;"><a href="marching-band.html">MARCHING BAND</a></h4>
+						<h4 style="margin-top: 15px;"><a href="{{route('eskul.create')}}">MARCHING BAND</a></h4>
 							<p>
 								Tukang Tatalu
 							</p>
@@ -222,7 +223,7 @@
 									<ul class="footer-nav">
 										<li><a href="#">Pramuka</a></li>
 										<li><a href="#">Osis</a></li>
-										<li><a href="#">Marching Band</a></li>
+										<li><a href="">Marching Band</a></li>
 										<li><a href="#">Paskibra</a></li>
 									</ul>
 								</div>

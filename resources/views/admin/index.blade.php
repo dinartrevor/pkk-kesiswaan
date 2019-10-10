@@ -59,7 +59,9 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Dashboard</span></a>
+                  <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</span></a>
+                  </li>
+                  <li><a href="/jurusan"><i class="fa fa-home"></i> Jurusan</span></a>
                   </li>
                   <li><a href="/absensi"><i class="fa fa-edit"></i> Absensi</a>
                     <ul class="nav child_menu"></ul>
@@ -67,7 +69,7 @@
                   <li><a href="/artikel"><i class="fa fa-desktop"></i> Artikel </span></a>
                     <ul class="nav child_menu"></ul>
                   </li>
-                  <li><a href="/ekstrakurikuler"><i class="fa fa-table"></i> Ekstrakurikuler</a>
+                <li><a href="{{route('eskul.index')}}"><i class="fa fa-table"></i> Ekstrakurikuler</a>
                     <ul class="nav child_menu"></ul>
                   </li>
                     <ul class="nav child_menu">

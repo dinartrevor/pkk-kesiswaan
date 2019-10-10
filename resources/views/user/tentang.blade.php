@@ -27,6 +27,7 @@
 			<link rel="stylesheet" href="/asset-user/css/magnific-popup.css">
 			<link rel="stylesheet" href="/asset-user/css/bootstrap.css">
 			<link rel="stylesheet" href="/asset-user/css/main.css">
+			<link rel="stylesheet" href="{{ asset('asset-user/css/style.css') }}">
 			<link rel="icon" href="/images/pi.jpeg" type="image/icon"/>
 		</head>
 		<body>
@@ -44,7 +45,8 @@
 									<li><a href="/events">Events</a></li>
 									<li><a href="/eskul">Extracuricular</a></li>
 									<li class="active"><a>About</a></li>
-									<li class="active"><a class= " navbar-btn" href="login.html"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
+									<li><a href="#">Forum</a></li>
+									<li class="active"><a class= " navbar-btn" href="/loginz"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
 								</ul>
 							</div>						
 						</div>

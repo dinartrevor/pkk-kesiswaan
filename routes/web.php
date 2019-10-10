@@ -25,9 +25,6 @@ Route::get('/artikel', function () {
     return view('admin.artikel');
 });
 
-Route::get('/ekstrakurikuler', function () {
-    return view('admin.eskul');
-});
 
 Route::get('/form', function () {
     return view('admin.form');
@@ -41,7 +38,7 @@ Route::get('/lupa', function () {
     return view('lupa_password');
 });
 
-Route::get('/verify', function () {
+Route::get('/verify-password', function () {
     return view('verify_password');
 });
 
@@ -54,9 +51,17 @@ Route::get('/events', function () {
     return view('user.events');
 });
 
-Route::get('/eskul', function () {
+Route::get('/ekskul', function () {
     return view('user.eskul');
 });
 Route::get('/tentang', function () {
     return view('user.tentang');
 });
+Route::get('/verify-akun', function () {
+    return view('verify_akun');
+});
+Route::get('/detail', function () {
+    return view('user.detail_artikel');
+});
+Route::resource('jurusan','JurusanController');
+Route::resource('eskul','DaftareskulController');

@@ -60,10 +60,12 @@
                 <ul class="nav side-menu">
                   <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</span></a>
                   </li>
+                  <li><a href="/jurusan"><i class="fa fa-home"></i> Jurusan</span></a>
+                  </li>
                   <li><a href="/absensi"><i class="fa fa-edit"></i> Absensi</a>
                     <ul class="nav child_menu"></ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Artikel </span></a>
+                  <li><a href="/artikel"><i class="fa fa-desktop"></i> Artikel </span></a>
                     <ul class="nav child_menu"></ul>
                   </li>
                   <li><a href="/ekstrakurikuler"><i class="fa fa-table"></i> Ekstrakurikuler</a>
@@ -159,9 +161,8 @@
                         <tr>
                           <th>No.</th>
                           <th>Judul Artikel</th>
+                          <th>Kategori Artikel</th>
                           <th>Gambar Artikel</th>
-                          <th>Tanggal Pembuatan</th>
-                          <th>Penulis Artikel</th>
                           <th>Pengaturan</th>
                         </tr>
                       </thead>
@@ -171,7 +172,7 @@
                           <td>Demonstrasi Ekstrakurikuler Tahun Ajaran 2019/2020</td>
                           <td>Kegiatan Ekstrakurikuler SMK Prakarya Internasional</td>
                           <td>13 September 2019</td>
-                          <td>Akbar</td>
+                          s
                           <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Lihat <i class="fa fa-eye"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
                         </tr>
                         <tr>
@@ -179,7 +180,7 @@
                           <td>HUT RI Ke-74</td>
                           <td>Merah Putih</td>
                           <td>17 Agustus 2019</td>
-                          <td>Dinar</td>
+                          
                           <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Lihat <i class="fa fa-eye"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
                         </tr>
                         <tr>
@@ -187,7 +188,7 @@
                           <td>Pentas Seni (PENSI)</td>
                           <td>Musik</td>
                           <td>02 Nopember 2019</td>
-                          <td>Ferdi</td>
+                          
                           <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Lihat <i class="fa fa-eye"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
                         </tr>
                         <tr>
@@ -195,7 +196,7 @@
                           <td>Pekan Olahraga Nasional (PORAK)</td>
                           <td>Olahraga</td>
                           <td>23 September 2019</td>
-                          <td>Rezky</td>
+                          
                           <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Lihat <i class="fa fa-eye"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
                         </tr>
                         <tr>
@@ -203,7 +204,7 @@
                           <td>Turnamen Mobile Legends</td>
                           <td>Mobile Legends: Bang Bang (MLBB)</td>
                           <td>02 Nopember 2019</td>
-                          <td>Yogi</td>
+                          
                           <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Lihat <i class="fa fa-eye"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
                         </tr>                 
                       </tbody>

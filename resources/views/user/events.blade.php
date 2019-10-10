@@ -30,6 +30,7 @@
                       <li class="active"><a>Events</a></li>
                       <li><a href="/eskul">Extracuricular</a></li>
                       <li><a href="/tentang">About</a></li>
+                      <li><a href="#">Forum</a></li>
                       <li class="active"><a class= " navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
                     </ul>
                   </div>						

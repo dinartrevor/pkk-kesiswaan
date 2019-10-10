@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{{ asset('images/pi.jpeg') }}" type="image/ico" />
+ <link rel="icon" href="{{ asset('images/pi.jpeg') }}" type="image/ico" />
     <title>Absensi - Web Kesiswaan</title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('asset-admin/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ asset('asset-admin/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('asset-admin/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
     <!-- NProgress -->
+    <link href="{{ asset('asset-admin/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
     <!-- iCheck -->
     <link href="{{ asset('asset-admin/vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
     <!-- Datatables -->
@@ -60,7 +60,7 @@
                 <ul class="nav side-menu">
                   <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</span></a>
                   </li>
-                  <li><a href="/jurusan"><i class="fa fa-home"></i> Jurusan</span></a>
+                  <li><a href="{{ route('jurusan.index') }}"><i class="fa fa-home"></i> Jurusan</span></a>
                   </li>
                   <li><a href="/absensi"><i class="fa fa-edit"></i> Absensi</a>
                     <ul class="nav child_menu"></ul>
@@ -176,7 +176,16 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
-            
+            <div class="page-title">
+              <div class="title_left"><br>
+                <select class="form-control" style="margin-left:10px;">
+                  <option value="">Pilih Ekstrakurikuler</option>
+                  <option value="">Osis</option>
+                  <option value="">Futsal</option>
+                  <option value="">Volly</option>
+                </select>
+              </div>
+
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
@@ -199,7 +208,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data Absensi Siswa</small></h2>
+                    <h2>Data Ekstrakurikuler</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -222,114 +231,39 @@
                       <thead>
                         <tr>
                           <th>No.</th>
-                          <th>NISN</th>
                           <th>Nama</th>
                           <th>Kelas</th>
                           <th>Jurusan</th>
-                          <th>Keterangan</th>
+                          <th>Nomor Telepon</th>
+                          <th>Alasan</th>
                           <th>Pengaturan</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1.</td>
-                          <td>17102359</td>
-                          <td>Akbar Mahmudin</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 5 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></<td>
-                        </tr>
-                        <tr>
-                          <td>2.</td>
-                          <td>17102364</td>
-                          <td>Dinar Abdul Holik Firdaus</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 3 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></<td>
-                        </tr>
-                        <tr>
-                          <td>3.</td>
-                          <td>17102366</td>
-                          <td>Ferdiansyah</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 15 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>4.</td>
-                          <td>17102368</td>
-                          <td>Ikhlas Suherlan</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 7 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>5.</td>
-                          <td>17102369</td>
-                          <td>Juan Rizal Alviano</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 9 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>6.</td>
-                          <td>17102371</td>
-                          <td>Mochamad Rizky Sanjaya</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 2 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>7.</td>
-                          <td>17102372</td>
-                          <td>Muhamad Fajar</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 10 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>8.</td>
-                          <td>17102373</td>
-                          <td>Muhamad Rezky Rizaldi</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 1 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>9.</td>
-                          <td>17102374</td>
-                          <td>Muhamad Rio</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 8 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>10.</td>
-                          <td>17102380</td>
-                          <td>Surya Ilham Maulana</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 4 Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>11.</td>
-                          <td>17102385</td>
-                          <td>Yogi Saputra</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>Terlambat 6  Menit</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>                 
+                            <?php
+                            $no= 1;                        
+                          ?>
+                            @foreach ($daftareskul as $j)
+                            <tr>
+                            <td>{{$no++}}</td>
+                              <td>{{$j->nama}}</td>
+                              <td>{{$j->kelas}}</td>
+                              <td>{{$j->jurusan->nama_jurusan}}</td>
+                              <td>{{$j->nomer_telepone}}</td>
+                              <td>{{$j->alasan}}</td>
+                              <td> 
+                                <a href="{{ route('eskul.edit', $j->id) }}" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span></a>
+                                <a href="javascript:void(0)" onclick="$(this).find('form').submit()" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> 
+                                  <form action="{{ route('eskul.destroy' ,$j->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                  </form>
+                                </a>
+                              </td>
+                            </tr>
+                          @endforeach
+                        </tr>                
                       </tbody>
                     </table>
                   </div>

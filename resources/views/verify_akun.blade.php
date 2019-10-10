@@ -18,36 +18,29 @@
 					<div class="brand_logo_container">
 						<img src="{{ asset('images/pi.jpeg') }}" class="brand_logo" alt="Logo">
 					</div>
-				</div>
+        </div>
 				<div class="d-flex justify-content-center form_container">
 					<form>
-						<div class="input-group mb-3">
+            <h5>Verify Akun </h5>
+						<div class="input-group mb-4">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="" class="form-control input_user" value="" placeholder="Username">
-						</div>
-						<div class="input-group mb-2">
+							<input type="text" name="email" class="form-control input_user" autocomplete="off" require placeholder="Nomer Induk Siswa">
+            </div>
+            <div class="input-group mb-4">
 							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="password" name="" class="form-control input_pass" value="" placeholder="Password">
+							<input type="email" name="email" class="form-control input_user" autocomplete="off" require placeholder="E-Mail Address">
 						</div>
 					</form>
 				</div>
 				<div class="d-flex justify-content-center mt-3 login_container">
-					<a href="/admin" class="btn login_btn">Login</a>
+					<a href="/register" class="btn login_btn">Kirim</a>
         </div>
         <div class="d-flex justify-content-center mt-3 login_container">
-					<a href="/" class="btn login_btn">Kembali</a>
-				</div>
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						<a href="/verify-akun" class="password">Register ?</a>
-					</div>
-					<div class="d-flex justify-content-center links">
-						<a href="/lupa" class="password">Lupa Password ?</a>
-					</div>
+					<a href="/login" class="btn login_btn">Kembali</a>
 				</div>
 			</div>
 		</div>

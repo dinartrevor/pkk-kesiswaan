@@ -31,7 +31,7 @@
 					</form>
 				</div>
 				<div class="d-flex justify-content-center mt-3 login_container">
-					<a href="/verify" class="btn login_btn">Kirim Pembaruan Password</a>
+					<a href="/verify-password" class="btn login_btn">Kirim Pembaruan Password</a>
         </div>
         <div class="d-flex justify-content-center mt-3 login_container">
 					<a href="/login" class="btn login_btn">Kembali</a>

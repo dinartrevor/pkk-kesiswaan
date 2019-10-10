@@ -60,6 +60,8 @@
                 <ul class="nav side-menu">
                   <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</span></a>
                   </li>
+                  <li><a href="/jurusan"><i class="fa fa-home"></i> Jurusan</span></a>
+                  </li>
                   <li><a href="/absensi"><i class="fa fa-edit"></i> Absensi</a>
                     <ul class="nav child_menu"></ul>
                   </li>
@@ -105,67 +107,6 @@
                     <li><a href="/login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
-
-                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/pi.jpeg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
             </nav>
           </div>
         </div>
@@ -176,12 +117,9 @@
           <div class="">
             <div class="page-title">
               <div class="title_left"><br>
-                <select class="form-control" style="margin-left:10px;">
-                  <option value="">Pilih Ekstrakurikuler</option>
-                  <option value="">Osis</option>
-                  <option value="">Futsal</option>
-                  <option value="">Volly</option>
-                </select>
+                <a href="{{ route('jurusan.create') }}" class="btn btn-lg btn-success" style="list-style: none; color: #fff;">Tambah Jurusan &nbsp;
+                  <i class="fa fa-plus" style="transform: translate(0, 1px);"></i>
+                </a>
               </div>
 
               <div class="title_right">
@@ -229,60 +167,29 @@
                       <thead>
                         <tr>
                           <th>No.</th>
-                          <th>NISN</th>
-                          <th>Nama</th>
-                          <th>Kelas</th>
-                          <th>Jurusan</th>
-                          <th>Nomor Telepon</th>
+                          <th>Nama Jurusan</th>
                           <th>Pengaturan</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1.</td>
-                          <td>17102345</td>
-                          <td>Yogi Saputra</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>+6285-XXXX-XXXX</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></<td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>17102346</td>
-                          <td>Ferdiansyah</td>
-                          <td>XII</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>+6285-XXXX-XXXX</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>3.</td>
-                          <td>17102347</td>
-                          <td>Dinar Abdul Holik Firdaus</td>
-                          <td>XII</td>
-                          <td>Teknik Sepeda Motor 1</td>
-                          <td>+6285-XXXX-XXXX</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>4.</td>
-                          <td>17102348</td>
-                          <td>Muhamad Rezky Rizaldi</td>
-                          <td>XI</td>
-                          <td>Rekayasa Perangkat Lunak 1</td>
-                          <td>+6285-XXXX-XXXX</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>5.</td>
-                          <td>17102349</td>
-                          <td>Muhamad Fajar</td>
-                          <td>X</td>
-                          <td>Teknik Mesin Produksi 1</td>
-                          <td>+6285-XXXX-XXXX</td>
-                          <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
-                        </tr>                 
+                        <?php
+                          $no= 1;                        
+                        ?>
+                          @foreach ($jurusan as $j)
+                          <tr>
+                          <td>{{$no++}}</td>
+                            <td>{{$j->nama_jurusan}}</td>
+                            <td> 
+                              <a href="{{ route('jurusan.edit', $j->id) }}" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span></a>
+                              <a href="javascript:void(0)" onclick="$(this).find('form').submit()" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> 
+                                <form action="{{ route('jurusan.destroy' ,$j->id) }}" method="post">
+                                  @csrf
+                                  @method('DELETE')
+                                </form>
+                              </a>
+                            </td>
+                          </tr>
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
