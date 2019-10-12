@@ -66,6 +66,9 @@
                   <li><a href="/absensi"><i class="fa fa-edit"></i> Absensi</a>
                     <ul class="nav child_menu"></ul>
                   </li>
+                <li><a href="{{route('kategori.index')}}"><i class="fa fa-desktop"></i> Kategori Artikel</a>
+                    <ul class="nav child_menu"></ul>
+                  </li>
                   <li><a href="/artikel"><i class="fa fa-desktop"></i> Artikel </span></a>
                     <ul class="nav child_menu"></ul>
                   </li>
@@ -179,35 +182,20 @@
           <!-- top tiles -->
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Peserta Ekschol</span>
-              <div class="count">2500</div>
+              <span class="count_top"><i class="fa fa-user"></i> Total Peserta Ekstrakulikuler</span>
+            <a href="/eskul"><div class="count red">{{ $daftareskul }}</div>
               <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-            </div>
+            </div></a>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Murid  terlambat </span>
-              <div class="count">123</div>
+              <span class="count_top"><i class="fa fa-clock-o"></i> Total Jurusan </span>
+              <a href="/jurusan"><div class="count blue">{{ $jurusan }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-            </div>
+            </div></a>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Ekstrakulikuler</span>
-              <div class="count green">2,500</div>
+              <span class="count_top"><i class="fa fa-user"></i> Total Kategori</span>
+            <a href="/kategori"><div class="count green">{{ $kategori }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Artikel Post </span>
-              <div class="count">4,567</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Murid tidak terlambat</span>
-              <div class="count">2,315</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Pengunjung web</span>
-              <div class="count">7,325</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
+            </div></a>
           </div>
           <!-- /top tiles -->
 

@@ -65,6 +65,9 @@
                   <li><a href="/absensi"><i class="fa fa-edit"></i> Absensi</a>
                     <ul class="nav child_menu"></ul>
                   </li>
+                  <li><a href="{{route('kategori.index')}}"><i class="fa fa-desktop"></i> Kategori Artikel </span></a>
+                    <ul class="nav child_menu"></ul>
+                  </li>
                   <li><a href="/artikel"><i class="fa fa-desktop"></i> Artikel </span></a>
                     <ul class="nav child_menu"></ul>
                   </li>

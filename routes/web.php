@@ -13,9 +13,6 @@
 
 
 // Admin
-Route::get('/admin', function () {
-    return view('admin.index');
-});
 
 Route::get('/absensi', function () {
     return view('admin.absensi');
@@ -24,7 +21,6 @@ Route::get('/absensi', function () {
 Route::get('/artikel', function () {
     return view('admin.artikel');
 });
-
 
 Route::get('/form', function () {
     return view('admin.form');
@@ -54,14 +50,20 @@ Route::get('/events', function () {
 Route::get('/ekskul', function () {
     return view('user.eskul');
 });
+
 Route::get('/tentang', function () {
     return view('user.tentang');
 });
+
 Route::get('/verify-akun', function () {
     return view('verify_akun');
 });
+
 Route::get('/detail', function () {
     return view('user.detail_artikel');
 });
+
 Route::resource('jurusan','JurusanController');
 Route::resource('eskul','DaftareskulController');
+Route::resource('kategori','KategoriController');
+Route::get('/admin', 'DashboardController@index');

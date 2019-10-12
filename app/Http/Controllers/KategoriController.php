@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Kategori;
 class KategoriController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //
+        $kategori=Kategori::all();
+        return view('admin.kategori.index', compact('kategori'));
     }
 
     /**
@@ -23,7 +24,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.kategori.create');
     }
 
     /**
@@ -34,7 +35,11 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'nama_kategori'=>'required|max:20',
+        ]);
+        Kategori::create($request->all());
+        return redirect()->route('kategori.index')->with('succes','Selamt Pesan Anda telah terkirim');
     }
 
     /**
@@ -56,7 +61,8 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kategori = Kategori::find($id);
+        return view('admin.kategori.edit', compact('kategori'));
     }
 
     /**
@@ -68,7 +74,12 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $kategori = Kategori::find($id);
+        $this->validate($request,[
+            'nama_kategori'=>'required|max:20',
+        ]);
+        $kategori->update($request->all());
+        return redirect()->route('kategori.index');
     }
 
     /**
@@ -79,6 +90,8 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kategori=Kategori::find($id);
+        $kategori->delete();
+        return redirect()->route('kategori.index');
     }
 }
