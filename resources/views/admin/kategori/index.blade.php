@@ -125,9 +125,8 @@
           <div class="">
             <div class="page-title">
               <div class="title_left"><br>
-                <a href="{{ route('kategori.create') }}" class="btn btn-lg btn-success" style="list-style: none; color: #fff;">Tambah Kategori &nbsp;
-                  <i class="fa fa-plus" style="transform: translate(0, 1px);"></i>
-                </a>
+                <h2>Data Kategori Artikel</small></h2>
+                  
               </div>
 
               <div class="title_right">
@@ -152,7 +151,9 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data Kategori Artikel</small></h2>
+                    <a href="{{ route('kategori.create') }}" class="btn btn-lg btn-success" style="list-style: none; color: #fff;">Tambah Kategori &nbsp;
+                      <i class="fa fa-plus" style="transform: translate(0, 1px);"></i>
+                    </a>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -168,8 +169,6 @@
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
                     </ul>
-                    <div class="clearfix"></div>
-                  </div>
                   <div class="x_content">
                     <table id="datatable" class="table table-striped table-bordered bulk_action text-center">
                       <thead>
@@ -201,6 +200,19 @@
                         @endforeach
                       </tbody>
                     </table>
+                    
+                    @if ($message = Session::get('succes'))
+                      <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button> 
+                          <strong>{{ $message }}</strong>
+                      </div>
+                    @endif
+                    @if ($message = Session::get('delete'))
+                      <div class="alert alert-danger alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button> 
+                          <strong>{{ $message }}</strong>
+                      </div>
+                    @endif
                   </div>
                 </div>
               </div>

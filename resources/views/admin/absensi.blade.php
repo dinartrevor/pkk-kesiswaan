@@ -65,7 +65,7 @@
                   <li><a href="/absensi"><i class="fa fa-edit"></i> Absensi</a>
                     <ul class="nav child_menu"></ul>
                   </li>
-                <li><a href="{{route('kategori.index')}}"><i class="fa fa-desktop"></i> Kategori Artikel </span></a>
+                  <li><a href="{{route('kategori.index')}}"><i class="fa fa-desktop"></i> Kategori Artikel </span></a>
                     <ul class="nav child_menu"></ul>
                   </li>
                   <li><a href="/artikel"><i class="fa fa-desktop"></i> Artikel </span></a>
@@ -333,6 +333,42 @@
                           <td>Terlambat 6  Menit</td>
                           <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
                         </tr>                 
+                        <tr>
+                            <td>11.</td>
+                            <td>17102385</td>
+                            <td>Yogi Saputra</td>
+                            <td>XII</td>
+                            <td>Rekayasa Perangkat Lunak 1</td>
+                            <td>Terlambat 6  Menit</td>
+                            <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
+                          </tr>                 
+                          <tr>
+                              <td>11.</td>
+                              <td>17102385</td>
+                              <td>Yogi Saputra</td>
+                              <td>XII</td>
+                              <td>Rekayasa Perangkat Lunak 1</td>
+                              <td>Terlambat 6  Menit</td>
+                              <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
+                            </tr>                 
+                            <tr>
+                                <td>11.</td>
+                                <td>17102385</td>
+                                <td>Yogi Saputra</td>
+                                <td>XII</td>
+                                <td>Rekayasa Perangkat Lunak 1</td>
+                                <td>Terlambat 6  Menit</td>
+                                <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
+                              </tr>                 
+                              <tr>
+                                  <td>11.</td>
+                                  <td>17102385</td>
+                                  <td>Yogi Saputra</td>
+                                  <td>XII</td>
+                                  <td>Rekayasa Perangkat Lunak 1</td>
+                                  <td>Terlambat 6  Menit</td>
+                                  <td><a href="#">Edit <i class="fa fa-edit"></i></a> || <a href="#">Hapus <i class="fa fa-trash"></i></a></td>
+                                </tr>                 
                       </tbody>
                     </table>
                   </div>
