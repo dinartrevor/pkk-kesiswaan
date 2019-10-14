@@ -42,23 +42,44 @@
 			<div class="post-wrapper pt-100">
 
 				<!-- Start post Area -->
+				<!-- modal -->
 				<section class="post-area">
 						<div class="container">
 								<div class="row justify-content-center d-flex">
 										<div class="col-lg-8">
-												<div class="form-group mb-20">
-													<h4 for="exampleFormControlTextarea1">Ajukan Pertanyaan</h4><br>
-													<form action="{{route('forums.store')}}" method="POST">
-														@method('POST')
-														@csrf
-														<input type="text" class="form-control" name="title" placeholder=" Enter Title">
-														<textarea class="form-control my-3" name="fill_title"id="exampleFormControlTextarea1" rows="7" placeholder="Enter Fill the title"></textarea>
-														<button type="submit" class="primary-btn">Kirim<span><i class="fa fa-paper-plane" style="color: white;"></i></span></button>  
-													</form>
-												</div>
+											<button type="button" class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ajukan pertanyaanmun</button>
+											<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  										<div class="modal-dialog" role="document">
+    										<div class="modal-content">
+      											<div class="modal-header">
+        											<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          													<span aria-hidden="true">&times;</span>
+        												</button>
+      											</div>
+      												<div class="modal-body">
+        												<form>
+          													<div class="form-group">
+            													<label for="recipient-name" class="col-form-label">Recipient:</label>
+            														<input type="text" class="form-control" id="recipient-name">
+          													</div>
+          														<div class="form-group">
+            														<label for="message-text" class="col-form-label">Message:</label>
+            															<textarea class="form-control" id="message-text"></textarea>
+          														</div>
+        												</form>
+      												</div>
+      													<div class="modal-footer">
+        													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        														<button type="button" class="btn btn-primary">Send message</button>
+      													</div>
+    												</div>
+  											</div>
+										</div>
+	<!--modal beres -->	
 												@foreach ($forums as $forum)
 																			
-					
+			
 
 												<div class="card pt-30 mb-50">
 													<div class="post-lists search-list">
@@ -79,7 +100,9 @@
 																</div>
 														</div>
 													</div>                                                                    
-												</div>     
+												</div>  
+
+
 												
 																			
 												@endforeach
