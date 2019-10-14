@@ -14,6 +14,13 @@
 
 // Admin
 
+Route::resource('jurusan','JurusanController');
+Route::resource('eskul','DaftareskulController');
+Route::resource('kategori','KategoriController');
+Route::get('/admin', 'DashboardController@index');
+Route::resource('forums', 'ForumsController');
+Route::resource('comments', 'CommentsController');
+
 Route::get('/absensi', function () {
     return view('admin.absensi');
 });
@@ -63,7 +70,3 @@ Route::get('/detail', function () {
     return view('user.detail_artikel');
 });
 
-Route::resource('jurusan','JurusanController');
-Route::resource('eskul','DaftareskulController');
-Route::resource('kategori','KategoriController');
-Route::get('/admin', 'DashboardController@index');

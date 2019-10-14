@@ -15,10 +15,8 @@ class CreateForumsTable extends Migration
     {
         Schema::create('forums', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $tabele->string('title');
-            $tabele->string('fill_title');
-            $table->unsignedBigInteger('users_id');
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('title');
+            $table->string('fill_title');
             $table->timestamps();
         });
     }
