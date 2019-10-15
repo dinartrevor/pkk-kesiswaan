@@ -71,7 +71,7 @@
                   <li><a href="/artikel"><i class="fa fa-desktop"></i> Artikel </span></a>
                     <ul class="nav child_menu"></ul>
                   </li>
-                  <li><a href="/ekstrakurikuler"><i class="fa fa-table"></i> Ekstrakurikuler</a>
+                <li><a href="{{route('eskul.index')}}"><i class="fa fa-table"></i> Ekstrakurikuler</a>
                     <ul class="nav child_menu"></ul>
                   </li>
                     <ul class="nav child_menu">

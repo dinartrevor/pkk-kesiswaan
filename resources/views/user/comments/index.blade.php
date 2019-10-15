@@ -37,35 +37,7 @@
 				</nav>
 			</header>
 			<!-- End Header Area -->
-      @dd($comments)
-       @enddd           
-            <!-- Start post Area -->
-            @foreach ($comments as $comment)
-																			
-            <div class="card pt-30 mb-50">
-              <div class="post-lists search-list">
-                <div class="single-list flex-row d-flex">
-                    <div class="thumb">
-                    </div>
-                    <div class="detail">
-                      <a href="/comments"><h4 class="pb-20">{{$comment->forums->title)}} <br>
-                        </h4>
-                      </a>
-                      <p>
-                      {{$comment->forum->fill_title}}
-                      </p>
-                      
-                      <p class="footer pt-20">
-                        <b><span>{{$comment->created_at->diffForHumans()}}</span></b> <i class="ml-50 fa fa-comment-o" aria-hidden="true"><a href="#"> 02 Comments</a></i>
-                      </p>
-                    </div>
-                </div>
-              </div>                                                                    
-            </div>     
-            
-                          
-            @endforeach
-              <section class="comment-sec-area pt-80 pb-80">
+             <section class="comment-sec-area pt-80 pb-80">
                   <div class="container">
                       <div class="row flex-column">
                           <h5 class="text-uppercase pb-80">05 Comments</h5>
