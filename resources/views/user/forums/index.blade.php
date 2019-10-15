@@ -45,38 +45,44 @@
 				<!-- modal -->
 				<section class="post-area">
 						<div class="container">
-								<div class="row justify-content-center d-flex">
-										<div class="col-lg-8">
-											<button type="button" class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ajukan pertanyaanmun</button>
-											<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  										<div class="modal-dialog" role="document">
-    										<div class="modal-content">
-      											<div class="modal-header">
-        											<h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          													<span aria-hidden="true">&times;</span>
-        												</button>
-      											</div>
-      												<div class="modal-body">
-        												<form>
-          													<div class="form-group">
-            													<label for="recipient-name" class="col-form-label">Recipient:</label>
-            														<input type="text" class="form-control" id="recipient-name">
-          													</div>
-          														<div class="form-group">
-            														<label for="message-text" class="col-form-label">Message:</label>
-            															<textarea class="form-control" id="message-text"></textarea>
-          														</div>
-        												</form>
-      												</div>
-      													<div class="modal-footer">
-        													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        														<button type="button" class="btn btn-primary">Send message</button>
-      													</div>
-    												</div>
-  											</div>
-										</div>
-	<!--modal beres -->	
+
+					<div class="container">
+							<div class="row justify-content-center d-flex">
+									<div class="col-lg-8">
+										<button type="button" class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ajukan pertanyaan</button>
+										<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																	<span aria-hidden="true">&times;</span>
+															</button>
+													</div>
+														<div class="modal-body">
+														<form action="{{route('forums.store')}}"method="POST">
+															@method('POST')
+															@csrf
+																<div class="form-group">
+																	<label for="recipient-name" class="col-form-label">Title</label>
+																		<input type="text" required="" class="form-control" name="title" id="recipient-name">
+																</div>
+																	<div class="form-group">
+																		<label for="message-text" class="col-form-label">Fill:</label>
+																		<textarea class="form-control" name="fill_title" required="" ></textarea>
+																</div>
+															
+														</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+																	<button type="submit" class="btn btn-primary">Send message</button>
+															</div>
+														</form>
+													</div>
+											</div>
+									</div>
+<!--modal beres -->	
+
 												@foreach ($forums as $forum)
 																			
 			

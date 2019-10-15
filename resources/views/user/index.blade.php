@@ -61,7 +61,7 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Berita Acara Terkini</h1>
+								<h1 class="mb-10">Berita Acara Terkini</h1><hr>
 								<p>Setiap tahun nya, Kami akan mempersiapkan suatu kegiatan/atraksi/pertunjukan baik secara individu maupun berkelompok untuk dipertunjukan sehingga akan ditemukan siswa-siswi yang memiliki bakat tertentu dan akan dikembangkan dan diberikan ruang untuk mempertajam bakat-bakat tersebut.</p>
 							</div>
 						</div>
@@ -162,7 +162,7 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Ekstrakurikuler</h1>
+								<h1 class="mb-10">Ekstrakurikuler</h1><hr>
 								<p>Adalah kegiatan non-pelajaran formal yang dilakukan peserta didik sekolah atau universitas, umumnya di luar jam belajar kurikulum standar. Kegiatan-kegiatan ini ada pada setiap jenjang pendidikan dari sekolah dasar sampai universitas. </p>
 							</div>
 						</div>
