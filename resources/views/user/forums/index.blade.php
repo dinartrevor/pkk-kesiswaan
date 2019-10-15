@@ -139,8 +139,9 @@
 															</p>
 															
 															<p class="footer pt-20">
-																<b><span>{{$forum->created_at->diffForHumans()}}</span></b> <i class="ml-50 fa fa-comment-o" aria-hidden="true"><a href="#"> 02 Comments</a></i>
+																<b><span>{{$forum->created_at->diffForHumans()}}</span></b> <i class="ml-50 fa fa-comment-o" aria-hidden="true"><a href="" id="klik"> 02 Comments</a></i>
 															</p>
+															<input type="text" id="comment" class="form-control" placeholder="Enter Comments">
 														</div>
 												</div>
 											</div>                                                                    
@@ -259,5 +260,15 @@
 			<script src="/asset-user/js/jquery.magnific-popup.min.js"></script>				
 			<script src="/asset-user/js/jquery.sticky.js"></script>
 			<script src="/asset-user/js/main.js"></script>	
+			<script>
+			jQuery( document ).ready(function() {
+
+				jQuery("#comment").hide();
+	 			jQuery("#klik").click(function(){
+	 				jQuery("#comment").show();
+				});
+			});
+	 
+			</script>
 		</body>
 	</html>
