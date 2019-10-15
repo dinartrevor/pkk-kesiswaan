@@ -67,23 +67,29 @@
 						</div>
 					</div>						
 					<div class="active-cat-carusel">
-						<div class="item single-cat">
-							<a href="#"><img src="{{ asset('images/74.jpg') }}" alt="" height="210px"></a>
-							<p class="date">10 Jan 2018</p>
-							<h4><a href="#">HUT RI Ke-74</a></h4>
-							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
+						<div class="card mr-4">
+							<div class="item single-cat">
+								<a href="/detail-events"><img src="{{ asset('images/74.jpg') }}" alt="" height="210px"></a>
+								<p class="date">10 Jan 2018</p>
+								<h4><a href="/detail-events">HUT RI Ke-74</a></h4>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
+							</div>
 						</div>
-						<div class="item single-cat">
-							<a href=""><img src="{{ asset('images/demo-eskul.jpg') }}" alt="" height="210px"></a>
-							<p class="date">10 Jan 2018</p>
-							<h4><a href="#">Demonstrasi Ekstrakurikuler</a></h4>
-							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
+						<div class="card mr-4">
+							<div class="item single-cat">
+								<a href=""><img src="{{ asset('images/demo-eskul.jpg') }}" alt="" height="210px"></a>
+								<p class="date">10 Jan 2018</p>
+								<h4><a href="#">Demonstrasi Ekstrakurikuler</a></h4>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
+							</div>
 						</div>
-						<div class="item single-cat">
-							<a href=""><img src="{{ asset('images/porak.jpg') }}" alt="" height="210px"></a>
-							<p class="date">10 Jan 2018</p>
-							<h4><a href="#">Pekan Olahraga Nasional </a></h4>
-							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
+						<div class="card mr-4">
+							<div class="item single-cat">
+								<a href=""><img src="{{ asset('images/porak.jpg') }}" alt="" height="210px"></a>
+								<p class="date">10 Jan 2018</p>
+								<h4><a href="#">Pekan Olahraga Nasional </a></h4>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
+							</div>
 						</div>							
 					</div>												
 				</div>	
@@ -96,7 +102,7 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Berita Acara</h1>
+								<h1 class="mb-10">Events News</h1>
 							</div>
 						</div>
 					</div>						
@@ -133,7 +139,7 @@
 							  	<p>Agu</p>
 							  </div>							  
 							  <div class="media-body align-self-center">
-							    <h4 class="mt-0"><a href="#">Hut Republik Indonesia Ke 74</a></h4>
+							    <h4 class="mt-0"><a href="/detail-events">Hut Republik Indonesia Ke 74</a></h4>
 							    <p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
 							  </div>
 							</div>

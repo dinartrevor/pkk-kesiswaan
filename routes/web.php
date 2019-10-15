@@ -50,6 +50,10 @@ Route::get('/', function () {
     return view('user.index');
 });
 
+Route::get('/detail-events', function () {
+    return view('user.detail_events');
+});
+
 Route::get('/events', function () {
     return view('user.events');
 });

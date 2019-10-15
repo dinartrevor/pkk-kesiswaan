@@ -25,11 +25,11 @@
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-h2="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 						<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							<ul class="navbar-nav">
-								<li class="active"><a href="/">Home</a></li>
+								<li><a href="/">Home</a></li>
 								<li><a href="/events">Events</a></li>
 								<li><a href="/ekskul">Extracuricular</a></li>
 								<li><a href="/tentang">About</a></li>
-								<li><a href="#">Forum</a></li>
+								<li class="active"><a>Forum</a></li>
 								<li class="active"><a class= " navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
 							</ul>
 						</div>						
@@ -42,17 +42,18 @@
 			<div class="post-wrapper pt-100">
 
 				<!-- Start post Area -->
-				<!-- modal -->
+
+				<!-- Modal -->
 				<section class="post-area">
 					<div class="container">
 							<div class="row justify-content-center d-flex">
 									<div class="col-lg-8">
-										<button type="button" class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ajukan pertanyaan</button>
+										<button type="button" class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ask Any Question &nbsp; <i class="fa fa-paper-plane text-light"></i></button>
 										<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 										<div class="modal-dialog" role="document">
 											<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+														<h5 class="modal-title" id="exampleModalLabel">Forum Message</h5>
 															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 																	<span aria-hidden="true">&times;</span>
 															</button>
@@ -62,12 +63,12 @@
 															@method('POST')
 															@csrf
 																<div class="form-group">
-																	<label for="recipient-name" class="col-form-label">Recipient:</label>
-																		<input type="text" class="form-control" name="title" id="recipient-name">
+																	<label for="recipient-name" class="col-form-label">Title :</label>
+																		<input type="text" class="form-control" name="title" id="recipient-name" required autofocus="">
 																</div>
 																	<div class="form-group">
-																		<label for="message-text" class="col-form-label">Message:</label>
-																		<textarea class="form-control" name="fill_title" ></textarea>
+																		<label for="message-text" class="col-form-label">Fill :</label>
+																		<textarea class="form-control" name="fill_title" required></textarea>
 																</div>
 															
 														</div>
@@ -79,35 +80,36 @@
 													</div>
 											</div>
 									</div>
-<!--modal beres -->	
-												@foreach ($forums as $forum)
-																			
-					
-
-												<div class="card pt-30 mb-50">
-													<div class="post-lists search-list">
-														<div class="single-list flex-row d-flex">
-																<div class="thumb">
-																</div>
-																<div class="detail">
-																	<a href=""><h4 class="pb-20">{{$forum->title}}
-																		
-																	</a> </h4><br>
-																	<p>
-																	{{$forum->fill_title}}
-																	</p>
-																	
-																	<p class="footer pt-20">
-																		<b><span>{{$forum->created_at->diffForHumans()}}</span></b> <i class="ml-50 fa fa-comment-o" aria-hidden="true"><a href="#"> 02 Comments</a></i>
-																	</p>
-																</div>
+									@if ($message = Session::get('success'))
+									<div class="alert alert-success alert-block">
+										<button type="button" class="close" data-dismiss="alert">×</button> 
+											<strong>{{ $message }}</strong>
+									</div>
+									@endif						
+									<!-- End Modal -->	
+									@foreach ($forums as $forum)									
+										<div class="card pt-30 mb-50">
+											<div class="post-lists search-list">
+												<div class="single-list flex-row d-flex">
+														<div class="thumb">
 														</div>
-													</div>                                                                    
-												</div>     
-												
-																			
-												@endforeach
-				
+														<div class="detail">
+															<a href=""><h4 class="pb-20">{{$forum->title}}
+																
+															</a> </h4><br>
+															<p>
+															{{$forum->fill_title}}
+															</p>
+															
+															<p class="footer pt-20">
+																<b><span>{{$forum->created_at->diffForHumans()}}</span></b> <i class="ml-50 fa fa-comment-o" aria-hidden="true"><a href="#"> 02 Comments</a></i>
+															</p>
+														</div>
+												</div>
+											</div>                                                                    
+										</div>     						
+									@endforeach
+		
 												<div class="justify-content-center d-flex">
 														<a class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" href="#"> Load More Post</a>
 												</div>    

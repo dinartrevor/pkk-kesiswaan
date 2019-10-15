@@ -35,10 +35,11 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
               <ul class="navbar-nav">
-                <li><a href="/">Beranda</a></li>
-                <li><a href="/events">Acara</a></li>
-							<li><a href="/ekskul">Ekstrakurikuler</a></li>
-                <li><a href="/tentang">Tentang</a></li>
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/events">Events</a></li>
+								<li><a href="/ekskul">Extracuricular</a></li>
+								<li><a href="/tentang">About</a></li>
+								<li><a href="{{route('forums.index') }}">Forum</a></li>
                 <li><a class= " navbar-btn" href="/login" style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a>
                 </li>
               </ul>
