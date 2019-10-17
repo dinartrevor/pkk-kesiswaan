@@ -6,7 +6,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="/asset/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         <p>Alexander Pierce</p>
@@ -18,10 +18,10 @@
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">HEADER</li>
-      <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
-      <li><a href="#"><i class="fa fa-link"></i> <span>Users</span></a></li>
-      <li><a href="/artikel"><i class="fa fa-link"></i> <span>Artikel</span></a></li>
-      <li><a href="#"><i class="fa fa-link"></i> <span>Ekstrakurikuler</span></a></li>
+      <li class="active"><a href="#"><i class="fa fa-dashboard "></i> <span>Dashboard</span></a></li>
+      <li><a href="#"><i class="fa fa-user"></i> <span>Users</span></a></li>
+      <li><a href="/artikel"><i class="fa fa-newspaper-o"></i> <span>Artikel</span></a></li>
+      <li><a href="#"><i class="fa fa-users"></i> <span>Ekstrakurikuler</span></a></li>
 
       {{-- <li class="treeview">
         <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
