@@ -27,51 +27,29 @@
             <thead>
               <tr>
                 <th>NO</th>
-                <th>Nama Lengkap</th>
-                <th>Jabatan</th>
-                <th>Jenis Kelamin</th>
-                <th>Agama</th>
-                <th>Alamat</th>
-                <th>Aksi</th>
+                <th>Thumbnail</th>
+                <th>Judul</th>
+                <th>Tanggal dibuat</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
+              @php
+                  $no =1
+              @endphp
+              @foreach ($artikel as $a)
               <tr>
-                <td>fasasfafs</td>
-                <td>asfasfasfasfasf</td>
-                <td>asfasfasfasf</td>
-                <td>thtyrhrdhdrh</td>
-                <td>sdgfgsdger</td>
-                <td>esrgsddsdg</td>
-                <td>rgrhrrtgsee</td>
+                <td>{{$no++}}</td>
+                <td><img src="{{$a->thumbnail}}" style="width: 100px; height: 50px"></td>
+                <td>{{$a->judul}}</td>
+                <td>{{$a->created_at->format('d M Y')}}</td>
+                <td class="text-center">
+                  <a class="btn btn-info btn-flat" href="#"><i class="fa fa-eye"></i></a>
+                  <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-edit"></i></a>
+                  <a class="btn btn-danger btn-flat" href="#"><i class="fa fa-minus"></i></a>
+                </td>
               </tr>
-              <tr>
-                <td>fasasfafs</td>
-                <td>asfasfasfasfasf</td>
-                <td>asfasfasfasf</td>
-                <td>thtyrhrdhdrh</td>
-                <td>sdgfgsdger</td>
-                <td>esrgsddsdg</td>
-                <td>rgrhrrtgsee</td>
-              </tr>
-              <tr>
-                <td>fasasfafs</td>
-                <td>asfasfasfasfasf</td>
-                <td>asfasfasfasf</td>
-                <td>thtyrhrdhdrh</td>
-                <td>sdgfgsdger</td>
-                <td>esrgsddsdg</td>
-                <td>rgrhrrtgsee</td>
-              </tr>
-              <tr>
-                <td>fasasfafs</td>
-                <td>asfasfasfasfasf</td>
-                <td>asfasfasfasf</td>
-                <td>thtyrhrdhdrh</td>
-                <td>sdgfgsdger</td>
-                <td>esrgsddsdg</td>
-                <td>rgrhrrtgsee</td>
-              </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

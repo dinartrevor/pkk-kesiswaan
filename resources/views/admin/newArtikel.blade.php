@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-header">
 <h1>
-  New Article
+  Article <small>convey your idea</small>
 </h1>
 <ol class="breadcrumb">
   <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</a></li>
@@ -13,25 +13,84 @@
 </section>
 
 <section class="content">
-  <div class="col-xs-12">
-    <div class="box">
-      <div class="box-body">
-        <form action="">
-          <input type="text" placeholder="Judul....">
+  <form class="form" action="{{route('artikel.post')}}" method="POST">
+    {{ csrf_field() }}
+    <div class="col-xs-10">
+      <div class="box box-primary">
+        <div class="box-header">
+          New Article
+        </div>
+        <div class="box-body">
+          <div class="form-group {{$errors->has('judul') ? 'has-error' : ''}}">
+            <label for="judul">Judul</label>
+            <input name="judul" class="form-control" id="judul" type="text" placeholder="Masukan judul" value="{{old('judul')}}">
+            @if ($errors->has('judul'))
+              <span class="help-block">{{$errors->first('judul')}}</span>
+            @endif
+          </div>
+          <div class="form-group {{$errors->has('konten') ? 'has-error' : ''}}">
+            <textarea name="konten" id="my-editor" name="content" class="form-control">{{old('konten')}}</textarea>
+            @if ($errors->has('konten'))
+              <span class="help-block">{{$errors->first('konten')}}</span>
+            @endif
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-flat" type="submit" style="float: right; width: 20%">Upload</button>
+          </div>
+          <div class="form-group">
+            <a  href="/artikel" class="btn btn-default btn-flat" style="float: right; width: 20%; margin-right: 5px">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-2">
+      <div class="box box-primary">
+        <div class="box-body">
           <div class="input-group">
             <span class="input-group-btn">
-              <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+              <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary btn-flat">
                 <i class="fa fa-picture-o"></i> Choose
               </a>
             </span>
-            <input id="thumbnail" class="form-control" type="text" name="filepath">
+            <input id="thumbnail" class="form-control" type="text" name="thumbnail" placeholder="Thumbnail">
           </div>
-        <img id="holder" style="margin-top:15px;max-height:100px;">
-          <textarea id="my-editor" name="content" class="form-control"></textarea>
-        </form>
+          <img id="holder" style="margin-top:15px;max-height:100px;">
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="">
+                <input type="checkbox" name="" id="">
+                Komputer
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="">
+                <input type="checkbox" name="" id="">
+                Sains
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="">
+                <input type="checkbox" name="" id="">
+                Fun
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="">
+                <input type="checkbox" name="" id="">
+                Kuliner
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </section>
 @endsection
 
@@ -47,9 +106,7 @@
   </script>
   <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
   <script>
-    $(document).ready(function(){
       $('#lfm').filemanager('images');
-    });
   </script>
   <script>
   CKEDITOR.replace('my-editor', options);

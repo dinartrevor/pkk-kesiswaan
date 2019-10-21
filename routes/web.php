@@ -1,25 +1,20 @@
 <?php
+// Auth
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 // Admin
-Route::get('/admin', function () {
-    return view('admin.index');
-});
+Route::get('/admin', 'DashboardController@index');
 
 Route::get('/absensi', function () {
     return view('admin.absensi');
 });
 
-Route::get('/artikel', function () {
-    return view('admin.artikel');
-});
 
-
-Route::get('/new-artikel', function () {
-    return view('admin.newArtikel');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
 
 Route::get('/lupa', function () {
     return view('lupa_password');
@@ -31,7 +26,7 @@ Route::get('/verify-password', function () {
 
 // User
 Route::get('/', function () {
-    return view('user.index');
+    return view('welcome');
 });
 
 Route::get('/events', function () {
@@ -52,3 +47,10 @@ Route::get('/detail', function () {
 });
 Route::resource('jurusan','JurusanController');
 Route::resource('eskul','DaftareskulController');
+
+Route::get('/artikel', 'ArtikelController@index')->name('artikel');
+Route::get('/new-artikel', 'ArtikelController@newArtikel');
+Route::post('/add-artikel', [
+    'uses' => 'ArtikelController@store',
+    'as' => 'artikel.post'
+]);

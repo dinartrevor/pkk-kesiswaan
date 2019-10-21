@@ -54,7 +54,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 0.2.0
     </div>
-    <strong>Copyright &copy; 2019 <a href="">Mager Dev</a>.</strong> All rights
+    <strong>Copyright &copy; 2019 <a href="">KoalaDev</a>.</strong> All rights
     reserved.
   </footer>
 

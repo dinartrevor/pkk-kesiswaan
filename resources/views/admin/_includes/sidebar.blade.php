@@ -9,7 +9,7 @@
         <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Alexander Pierce</p>
+        <p>{{auth()->user()->name}}</p>
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
@@ -18,7 +18,7 @@
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">HEADER</li>
-      <li class="active"><a href="#"><i class="fa fa-dashboard "></i> <span>Dashboard</span></a></li>
+      <li class="active"><a href="/admin"><i class="fa fa-dashboard "></i> <span>Dashboard</span></a></li>
       <li><a href="#"><i class="fa fa-user"></i> <span>Users</span></a></li>
       <li><a href="/artikel"><i class="fa fa-newspaper-o"></i> <span>Artikel</span></a></li>
       <li><a href="#"><i class="fa fa-users"></i> <span>Ekstrakurikuler</span></a></li>
