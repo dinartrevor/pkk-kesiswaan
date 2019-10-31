@@ -8,12 +8,12 @@
 <ol class="breadcrumb">
   <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</a></li>
   <li><a href="/artikel">Article</a></li>
-  <li><a href="/new-artikel" class="active">new article</a></li>
+  <li><a href="/new-artikel" class="active">edit article</a></li>
 </ol>
 </section>
 
 <section class="content">
-  <form class="form" action="{{route('artikel.post')}}" method="POST">
+  <form class="form" action="{{url('/update-artikel/'.$artikel->id)}}" method="POST">
     {{ csrf_field() }}
     <div class="col-xs-10">
       <div class="box box-primary">
@@ -23,13 +23,13 @@
         <div class="box-body">
           <div class="form-group {{$errors->has('judul') ? 'has-error' : ''}}">
             <label for="judul">Judul</label>
-            <input name="judul" class="form-control" id="judul" type="text" placeholder="Masukan judul" value="{{old('judul')}}">
+            <input name="judul" class="form-control" id="judul" type="text" placeholder="Masukan judul" value="{{$artikel->judul}}">
             @if ($errors->has('judul'))
               <span class="help-block">{{$errors->first('judul')}}</span>
             @endif
           </div>
           <div class="form-group {{$errors->has('konten') ? 'has-error' : ''}}">
-            <textarea name="konten" id="my-editor" name="content" class="form-control">{{old('konten')}}</textarea>
+            <textarea name="konten" id="my-editor" name="content" class="form-control">{{$artikel->konten}}</textarea>
             @if ($errors->has('konten'))
               <span class="help-block">{{$errors->first('konten')}}</span>
             @endif
@@ -52,7 +52,7 @@
                 <i class="fa fa-picture-o"></i> Choose
               </a>
             </span>
-            <input id="thumbnail" class="form-control" type="text" name="thumbnail" placeholder="Thumbnail">
+            <input id="thumbnail" class="form-control" type="text" name="thumbnail" placeholder="Thumbnail" value="{{$artikel->thumbnail}}">
           </div>
           <img id="holder" style="margin-top:15px;max-height:100px;">
           <div class="form-group">

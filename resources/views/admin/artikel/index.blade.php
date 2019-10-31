@@ -45,8 +45,8 @@
                 <td>{{$a->created_at->format('d M Y')}}</td>
                 <td class="text-center">
                   <a class="btn btn-info btn-flat" href="#"><i class="fa fa-eye"></i></a>
-                  <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-edit"></i></a>
-                  <a class="btn btn-danger btn-flat" href="#"><i class="fa fa-minus"></i></a>
+                  <a class="btn btn-warning btn-flat" href="{{url('/edit-artikel/'.$a->id)}}"><i class="fa fa-edit"></i></a>
+                  <a class="btn btn-danger btn-flat delete" href="#" artikel-id = "{{$a->id}}"><i class="fa fa-minus"></i></a>
                 </td>
               </tr>
               @endforeach
@@ -66,7 +66,7 @@
 </script>
 <script>
   $('.delete').click(function () {
-    var karyawan_id = $(this).attr('karyawanId');
+    var artikel_id = $(this).attr('artikel-id');
 
     swal({
       title: "Apa anda yakin?",
@@ -77,7 +77,7 @@
     })
     .then((willDelete) => {
       if (willDelete){
-        window.location = "/karyawan/"+karyawan_id+"/delete";
+        window.location = "/delete-artikel/"+artikel_id;
         swal("Data telah berhasil dihapus!", {
           icon: "success",
         });

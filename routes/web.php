@@ -26,7 +26,7 @@ Route::get('/verify-password', function () {
 
 // User
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
 });
 
 Route::get('/events', function () {
@@ -54,3 +54,9 @@ Route::post('/add-artikel', [
     'uses' => 'ArtikelController@store',
     'as' => 'artikel.post'
 ]);
+Route::get('/edit-artikel/{artikel}', 'ArtikelController@editArtikel');
+Route::post('/update-artikel/{artikel}', [
+    'uses' => 'ArtikelController@update',
+    'as' => 'artikel.update'
+    ]);
+Route::get('/delete-artikel/{artikel}', 'ArtikelController@destroy');

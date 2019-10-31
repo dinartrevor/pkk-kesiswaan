@@ -13,7 +13,8 @@
 			<img src="/asset-login/img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('login') }}">
+                {{csrf_field()}}
 				<img src="/asset-login/img/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
