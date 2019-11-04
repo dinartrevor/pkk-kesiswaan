@@ -8,12 +8,12 @@
 <ol class="breadcrumb">
   <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</a></li>
   <li><a href="/artikel">Article</a></li>
-  <li><a href="/new-artikel" class="active">edit article</a></li>
+  <li><a href="/artikel/edit-artikel" class="active">edit article</a></li>
 </ol>
 </section>
 
 <section class="content">
-  <form class="form" action="{{url('/update-artikel/'.$artikel->id)}}" method="POST">
+  <form class="form" action="{{url('/artikel/update-artikel/'.$artikel->id)}}" method="POST">
     {{ csrf_field() }}
     <div class="col-xs-10">
       <div class="box box-primary">
@@ -56,36 +56,12 @@
           </div>
           <img id="holder" style="margin-top:15px;max-height:100px;">
           <div class="form-group">
-            <div class="checkbox">
-              <label for="">
-                <input type="checkbox" name="" id="">
-                Komputer
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="checkbox">
-              <label for="">
-                <input type="checkbox" name="" id="">
-                Sains
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="checkbox">
-              <label for="">
-                <input type="checkbox" name="" id="">
-                Fun
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="checkbox">
-              <label for="">
-                <input type="checkbox" name="" id="">
-                Kuliner
-              </label>
-            </div>
+            <label>Kategori</label>
+            <select class="form-control" name="kategori">
+              @foreach ($kategori as $k)
+              <option value="{{$k->id}}" {{$artikel['kategori_id']==$k->id ? 'selected' : ''}}>{{$k->nama_kategori}}</option>
+              @endforeach
+            </select>
           </div>
         </div>
       </div>

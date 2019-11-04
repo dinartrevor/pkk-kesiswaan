@@ -19,7 +19,9 @@ class CreateArtikelTable extends Migration
             $table->string('slug');
             $table->text('thumbnail');
             $table->text('konten');
+            $table->enum('status', ['draft', 'active']);
             $table->integer('user_id');
+            $table->integer('kategori_id');
             $table->timestamps();
         });
     }

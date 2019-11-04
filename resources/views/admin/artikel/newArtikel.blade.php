@@ -8,7 +8,7 @@
 <ol class="breadcrumb">
   <li><a href="/admin"><i class="fa fa-home"></i> Dashboard</a></li>
   <li><a href="/artikel">Article</a></li>
-  <li><a href="/new-artikel" class="active">new article</a></li>
+  <li><a href="/artikel/new-artikel" class="active">new article</a></li>
 </ol>
 </section>
 
@@ -35,10 +35,10 @@
             @endif
           </div>
           <div class="form-group">
-            <button class="btn btn-primary btn-flat" type="submit" style="float: right; width: 20%">Upload</button>
+            <button class="btn btn-primary btn-flat" type="submit" style="float: right; width: 20%" name="simpan" value="active">Upload</button>
           </div>
           <div class="form-group">
-            <a  href="/artikel" class="btn btn-default btn-flat" style="float: right; width: 20%; margin-right: 5px">Cancel</a>
+            <button class="btn btn-default btn-flat" type="submit" style="float: right; width: 20%; margin-right: 5px" name="simpan" value="draft">Draft</button>
           </div>
         </div>
       </div>
@@ -46,36 +46,25 @@
     <div class="col-xs-2">
       <div class="box box-primary">
         <div class="box-body">
-          <div class="input-group">
-            <span class="input-group-btn">
-              <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary btn-flat">
-                <i class="fa fa-picture-o"></i> Choose
-              </a>
-            </span>
-            <input id="thumbnail" class="form-control" type="text" name="thumbnail" placeholder="Thumbnail">
+          <div class="form-group">
+            <label>Thumbnail</label>
+            <div class="input-group">
+              <span class="input-group-btn">
+                <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary btn-flat">
+                  <i class="fa fa-picture-o"></i> Choose
+                </a>
+              </span>
+              <input id="thumbnail" class="form-control" type="text" name="thumbnail" placeholder="Thumbnail" value="{{old('thumbnail')}}">
+            </div>
           </div>
           <img id="holder" style="margin-top:15px;max-height:100px;">
-          <div class="form-group" data-toggle="buttons">
-            <label class="btn btn-primary btn-flat">
-              <input type="checkbox" checked autocomplete="off"> Sains
-            </label>
-            <label class="btn btn-primary btn-flat">
-              <input type="checkbox" checked autocomplete="off"> Komputer
-            </label>
-          </div>
-          <div class="form-group" data-toggle="buttons">
-            <label class="btn btn-primary btn-flat">
-              <input type="checkbox" checked autocomplete="off"> Fun
-            </label>
-            <label class="btn btn-primary btn-flat">
-              <input type="checkbox" checked autocomplete="off"> History
-            </label>
-          </div>
-          <div class="input-group">
-            <input id="" class="form-control" type="text" name="" placeholder="Kategori">
-            {{-- <span class="input-group-btn">
-              <button class="btn btn-primary btn-flat">Tambah</button>
-            </span> --}}
+          <div class="form-group">
+            <label>Kategori</label>
+            <select class="form-control" name="kategori">
+              @foreach ($kategori as $k)
+              <option value="{{$k->id}}">{{$k->nama_kategori}}</option>
+              @endforeach
+            </select>
           </div>
         </div>
       </div>

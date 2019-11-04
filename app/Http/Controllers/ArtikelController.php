@@ -5,19 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Artikel;
+use App\Kategori;
 use Session;
 
 class ArtikelController extends Controller
 {
     public function index()
     {
-        $artikel = Artikel::all();
+        $artikel = Artikel::all()->where('user_id', auth()->user()->id);
         return view('admin.artikel.index', compact('artikel'));
     }
 
     public function newArtikel()
     {
-        return view('admin.artikel.newArtikel');
+        $kategori = Kategori::all();
+        return view('admin.artikel.newArtikel', compact('kategori'));
     }
 
     public function store(Request $request)
@@ -31,21 +33,25 @@ class ArtikelController extends Controller
         $this->validate($request,[
             'judul' => 'required|min:5|max:20',
             'konten' => 'required',
-            'thumbnail' => 'required'
+            'thumbnail' => 'required',
+            'kategori' => 'required'
         ],$messages);
 
         $artikel = Artikel::create([
             'judul' => $request->judul,
             'thumbnail' => $request->thumbnail,
             'konten' => $request->konten,
-            'user_id' => auth()->user()->id
+            'status' => $request->simpan,
+            'user_id' => auth()->user()->id,
+            'kategori_id' => $request->kategori
         ]);
         return redirect()->route('artikel')->with('sukses', 'Artikel berhasil ditambahkan');
     }
 
     public function editArtikel(Artikel $artikel)
     {
-        return view('admin.artikel.editArtikel', compact('artikel'));
+        $kategori = Kategori::all();
+        return view('admin.artikel.editArtikel', compact('artikel','kategori'));
     }
 
     public function update(Request $request, Artikel $artikel)
@@ -59,14 +65,17 @@ class ArtikelController extends Controller
         $this->validate($request,[
             'judul' => 'required|min:5|max:20',
             'konten' => 'required',
-            'thumbnail' => 'required'
+            'thumbnail' => 'required',
+            'kategori' => 'required'
         ],$messages);
 
         $artikel->update([
             'judul' => $request->judul,
             'thumbnail' => $request->thumbnail,
             'konten' => $request->konten,
-            'user_id' => auth()->user()->id
+            'status' => $request->simpan,
+            'user_id' => auth()->user()->id,
+            'kategori_id' => $request->kategori
         ]);
         return redirect()->route('artikel')->with('sukses', 'Artikel berhasil ditambahkan');
     }

@@ -10,7 +10,7 @@ class Artikel extends Model
     use Sluggable;
 
     protected $table = "artikel";
-    protected $fillable = ['judul','slug','thumbnail','konten','user_id'];
+    protected $fillable = ['judul','slug','thumbnail','konten','user_id', 'kategori_id','status'];
 
     /**
      * Return the sluggable configuration array for this model.
@@ -24,5 +24,10 @@ class Artikel extends Model
                 'source' => 'judul'
             ]
         ];
+    }
+
+    public function kategori()
+    {
+        return $this->belongsTo('App\Kategori');
     }
 }

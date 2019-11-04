@@ -177,7 +177,7 @@
 						</div>
 						<div class="col-lg-3 col-md-6 single-fashion">
 							<a href="marching-band.html"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
-						<h4 style="margin-top: 15px;"><a href="{{route('eskul.create')}}">MARCHING BAND</a></h4>
+						<h4 style="margin-top: 15px;"><a href="">MARCHING BAND</a></h4>
 							<p>
 								Tukang Tatalu
 							</p>

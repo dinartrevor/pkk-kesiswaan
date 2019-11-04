@@ -18,22 +18,22 @@
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">HEADER</li>
-      <li class="active"><a href="/admin"><i class="fa fa-dashboard "></i> <span>Dashboard</span></a></li>
+      <li class="{{Request::is('admin')?'active':''}}"><a href="/admin"><i class="fa fa-dashboard "></i> <span>Dashboard</span></a></li>
       <li><a href="#"><i class="fa fa-user"></i> <span>Users</span></a></li>
-      <li><a href="/artikel"><i class="fa fa-newspaper-o"></i> <span>Artikel</span></a></li>
-      <li><a href="#"><i class="fa fa-users"></i> <span>Ekstrakurikuler</span></a></li>
-
-      {{-- <li class="treeview">
-        <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+      <li class="treeview {{Request::is('artikel','artikel/new-artikel')?'active':''}}">
+        <a href="#"><i class="fa fa-newspaper-o"></i> <span>Article</span>
           <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#">Link in level 2</a></li>
-          <li><a href="#">Link in level 2</a></li>
+          <li class="{{Request::is('artikel/new-artikel')?'active':''}}"><a href="/artikel/new-artikel"><i class="fa fa-circle-o"></i> Add new Article</a></li>
+          <li class="{{Request::is('artikel')?'active':''}}"><a href="/artikel"><i class="fa fa-circle-o"></i> All Article</a></li>
         </ul>
-      </li> --}}
+      </li>
+      <li class="{{Request::is('kategori')?'active':''}}"><a href="/kategori"><i class="fa fa-tags"></i> <span>Category</span></a></li>
+      <li><a href="#"><i class="fa fa-users"></i> <span>Ekstrakurikuler</span></a></li>
+
     </ul>
     <!-- /.sidebar-menu -->
   </section>
