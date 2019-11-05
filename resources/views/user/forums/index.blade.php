@@ -1,43 +1,6 @@
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="author" content="colorlib">
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta charset="UTF-8">
-		<title>E - Mading</title>
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-		<link rel="stylesheet" href="{{ asset('asset-user/css/linearicons.css') }}">
-		<link rel="stylesheet" href="{{ asset('asset-user/css/font-awesome.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('asset-user/css/bootstrap.css') }}">
-		<link rel="stylesheet" href="{{ asset('asset-user/css/owl.carousel.css') }}">
-		<link rel="stylesheet" href="{{ asset('asset-user/css/main.css') }}">
-		<link rel="stylesheet" href="{{ asset('asset-user/css/style.css') }}">
-		<link rel="icon" href="{{ asset('images/pi.jpeg') }}" type="image/icon"/>
-		</head>
-		<body>
-			<!-- Start Header Area -->
-			<header class="default-header">
-				<nav class="navbar navbar-expand-lg navbar-light">
-					<div class="container">
-						<a class="navbar-brand" href="/" style="font-weight: 500;"><img src="{{ asset('images/pi.jpeg') }}" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-h2="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-						<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-							<ul class="navbar-nav">
-								<li><a href="/">Home</a></li>
-								<li><a href="/events">Events</a></li>
-								<li><a href="/ekskul">Extracuricular</a></li>
-								<li><a href="/tentang">About</a></li>
-								<li class="active"><a>Forum</a></li>
-								<li class="active"><a class= " navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
-							</ul>
-						</div>						
-					</div>
-				</nav>
-			</header>
-			<!-- End Header Area -->
-
+	   
 			<!-- Forum Area -->
 			<div class="post-wrapper pt-100">
 
@@ -115,40 +78,7 @@
 												
 																			
 												@endforeach
-				
-=======
-									@if ($message = Session::get('success'))
-									<div class="alert alert-success alert-block">
-										<button type="button" class="close" data-dismiss="alert">×</button> 
-											<strong>{{ $message }}</strong>
-									</div>
-									@endif						
-									<!-- End Modal -->	
-									@foreach ($forums as $forum)									
-										<div class="card pt-30 mb-50">
-											<div class="post-lists search-list">
-												<div class="single-list flex-row d-flex">
-														<div class="thumb">
-														</div>
-														<div class="detail">
-															<a href=""><h4 class="pb-20">{{$forum->title}}
-																
-															</a> </h4><br>
-															<p>
-															{{$forum->fill_title}}
-															</p>
-															
-															<p class="footer pt-20">
-																<b><span>{{$forum->created_at->diffForHumans()}}</span></b> <i class="ml-50 fa fa-comment-o" aria-hidden="true"><a href="" id="klik"> 02 Comments</a></i>
-															</p>
-															<input type="text" id="comment" class="form-control" placeholder="Enter Comments">
-														</div>
-												</div>
-											</div>                                                                    
-										</div>     						
-									@endforeach
-		
->>>>>>> 94c5072af8de30460efc4502ee4810345184db18
+
 												<div class="justify-content-center d-flex">
 														<a class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" href="#"> Load More Post</a>
 												</div>    
