@@ -23,6 +23,7 @@ class ComposerStaticInit5386eb71667b29357fc5acb9a0b063e1
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        '897548979755c5c17f65c862d0bc62d7' => __DIR__ . '/../..' . '/app/Helpers/notif.php',
     );
 
     public static $prefixLengthsPsr4 = array (

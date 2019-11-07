@@ -58,7 +58,9 @@
                 </td>
                 <td class="text-center">
                   <a class="btn btn-info btn-flat" href="#"><i class="fa fa-eye"></i></a>
+                  @if ($a->status == "draft")
                   <a class="btn btn-warning btn-flat" href="{{url('/artikel/edit-artikel/'.$a->id)}}"><i class="fa fa-edit"></i></a>
+                  @endif
                   <a class="btn btn-danger btn-flat delete" href="#" artikel-id = "{{$a->id}}"><i class="fa fa-minus"></i></a>
                 </td>
               </tr>

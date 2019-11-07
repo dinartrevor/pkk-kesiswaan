@@ -51,7 +51,11 @@ class ArtikelController extends Controller
     public function editArtikel(Artikel $artikel)
     {
         $kategori = Kategori::all();
-        return view('admin.artikel.editArtikel', compact('artikel','kategori'));
+        if ($artikel->status == 'draft') {
+            return view('admin.artikel.editArtikel', compact('artikel','kategori'));
+        }else{
+            return redirect('/artikel')->with('error', 'Artikel active tidak dapat diubah');
+        }
     }
 
     public function update(Request $request, Artikel $artikel)
@@ -61,7 +65,7 @@ class ArtikelController extends Controller
             'min' => ':attribute harus diisi minimal :min karakter',
             'max' => ':attribute diisi maksimal :max karakter'
         ];
-
+        
         $this->validate($request,[
             'judul' => 'required|min:5|max:20',
             'konten' => 'required',

@@ -35,10 +35,10 @@
             @endif
           </div>
           <div class="form-group">
-            <button class="btn btn-primary btn-flat" type="submit" style="float: right; width: 20%">Upload</button>
+            <button class="btn btn-primary btn-flat" type="submit" style="float: right; width: 20%" name="simpan" value="active">Upload</button>
           </div>
           <div class="form-group">
-            <a  href="/artikel" class="btn btn-default btn-flat" style="float: right; width: 20%; margin-right: 5px">Cancel</a>
+            <button  href="/artikel" class="btn btn-default btn-flat" style="float: right; width: 20%; margin-right: 5px" name="simpan" value="draft">Draft</button>
           </div>
         </div>
       </div>

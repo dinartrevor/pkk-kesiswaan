@@ -23,8 +23,14 @@
       <li class="treeview {{Request::is('artikel','artikel/new-artikel')?'active':''}}">
         <a href="#"><i class="fa fa-newspaper-o"></i> <span>Article</span>
           <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+          @if (notArtikel() == date('Y-m-d'))
+              
+          @endif
+          <span class="pull-right-container">
+            <span class="label label-primary pull-right">{{notArtikel()}}</span>
+          </span>
         </a>
         <ul class="treeview-menu">
           <li class="{{Request::is('artikel/new-artikel')?'active':''}}"><a href="/artikel/new-artikel"><i class="fa fa-circle-o"></i> Add new Article</a></li>
