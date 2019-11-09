@@ -3,9 +3,9 @@
   <!-- Logo -->
   <a href="index2.html" class="logo" style="background: #46C8E3">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>A</b>LT</span>
+    <span class="logo-mini"><b>A</b>KD</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>Admin</b>LTE</span>
+    <span class="logo-lg"><b>Admin</b>Kode</span>
   </a>
 
   <!-- Header Navbar -->
@@ -129,7 +129,7 @@
 
               <p>
                 {{auth()->user()->name}} - Web Developer
-                <small>Member since {{auth()->user()->created_at->format('M Y')}}</small>
+                <small>Member since {{ auth()->user()->created_at ? auth()->user()->created_at->format('M Y') : null }}</small>
               </p>
             </li>
             <!-- Menu Footer-->

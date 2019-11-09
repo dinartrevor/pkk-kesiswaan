@@ -1,4 +1,5 @@
 <?php
+use App\Students;
 // Auth
 Auth::routes();
 
@@ -24,6 +25,11 @@ Route::group(['middleware' => ['auth','checkRole:admin,penulis,pengurus']], func
     
     Route::get('/kategori', 'KategoriController@index');
     Route::post('/kategori/add-kategori', 'KategoriController@store')->name('kategori');
+    // siswa
+    Route::get('/siswa', function(){
+        $students = Students::all();
+        return view('admin.students.index', compact('students'));
+    });
 });
 
 // User
@@ -39,3 +45,6 @@ Route::get('/ekskul', function () {
 Route::get('/tentang', function () {
     return view('user.tentang');
 });
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    '\vendor\uniSharp\LaravelFilemanager\Lfm::routes()';});
+    
