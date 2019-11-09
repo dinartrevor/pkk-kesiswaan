@@ -1,4 +1,5 @@
 <?php
+
 use App\Artikel;
 
 function notArtikel()
