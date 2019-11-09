@@ -30,7 +30,7 @@
                       <li><a href="/events">Events</a></li>
                       <li class="active"><a>Extracuricular</a></li>
                       <li><a href="/tentang">About</a></li>
-                      <li><a href="{{route('forums.index') }}">Forum</a></li>
+                      <li><a href="#">Forum</a></li>
                       <li class="active"><a class= "navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
                     </ul>
                   </div>						
@@ -64,8 +64,8 @@
                 <h4 style="margin-top: 15px;"><a href="paskibra.html">PASKIBRA</a></h4>
               </div>
               <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="{{route('eskul.create')}}"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="{{route('eskul.create')}}">MARCHING BAND</a></h4>
+                <a href="#"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
+                <h4 style="margin-top: 15px;"><a href="#">MARCHING BAND</a></h4>
               </div>
               <div class="col-lg-3 col-md-6 single-fashion">
                 <a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
