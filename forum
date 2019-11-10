@@ -1,0 +1,7 @@
+forum :
+
+1. model forum { user_id, category_id, title, post_date, content, publish }
+2. model moderate (user)
+3. model category { title }
+4. model comments { user_id, forum_id, content, date, publish }
+5. model reply_comment { rece ipt_id, sender_id, comment_id, content }
