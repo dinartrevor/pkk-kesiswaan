@@ -46,18 +46,18 @@
                 <td><img src="{{$a->thumbnail}}" style="width: 100px; height: 50px"></td>
                 <td><a class="judul" href="#" data-type="text" data-pk="{{$a->id}}" data-url="/api/artikel/{{$a->id}}/editArtikel" data-title="Enter Title">{{$a->judul}}</a></td>
                 @if ($a->kategori_id)
-                <td><a class="kategori" href="#" data-type="select" data-pk="{{$a->id}}" data-url="/api/post/artikel/{{$a->id}}/editArtikel" data-title="Select Category">{{$a->kategori->nama_kategori}}</a></td>
+                <td>{{$a->kategori->nama_kategori}}</td>
                 @endif
                 <td>{{$a->created_at->format('d M Y')}}</td>
                 <td>
-                  @if ($a->status == "active")
-                    <span class="label bg-green">ACTIVE</span>
+                  @if ($a->status == "publish")
+                    <span class="label bg-green">PUBLISH</span>
                   @else
                     <span class="label bg-yellow">DRAFT</span>
                   @endif
                 </td>
                 <td class="text-center">
-                  <a class="btn btn-info btn-flat" href="#"><i class="fa fa-eye"></i></a>
+                  <a class="btn btn-info btn-flat" href="{{url('/artikel/show/'.$a->id)}}"><i class="fa fa-eye"></i></a>
                   @if ($a->status == "draft")
                   <a class="btn btn-warning btn-flat" href="{{url('/artikel/edit-artikel/'.$a->id)}}"><i class="fa fa-edit"></i></a>
                   @endif
@@ -105,17 +105,6 @@
   $.fn.editable.defaults.mode = 'inline';
   $(document).ready(function() {
     $('.judul').editable();
-  });
-
-  $(function(){
-    $('.kategori').editable({
-      value: 2,    
-      source: [
-            {value: 1, text: 'Active'},
-            {value: 2, text: 'Blocked'},
-            {value: 3, text: 'Deleted'}
-        ]
-    });
   });
 </script>
 @endsection

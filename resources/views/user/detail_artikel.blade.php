@@ -39,7 +39,7 @@
                 <li class="active"><a href="/events">Events</a></li>
 								<li><a href="/ekskul">Extracuricular</a></li>
 								<li><a href="/tentang">About</a></li>
-								<li><a href="{{route('forums.index') }}">Forum</a></li>
+								<li><a href="#">Forum</a></li>
                 <li><a class= " navbar-btn" href="/login" style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a>
                 </li>
               </ul>
@@ -86,7 +86,7 @@
 						<div class="col-lg-4 sidebar-area ">
 							<div class="single_widget search_widget">
 								<h3 class="text-center">Form Pendaftaran Ekstakulikuler</h3><br>
-								<form action="{{ route('eskul.store')}} "method="POST">
+								<form action="# "method="POST">
 									@if ($message = Session::get('success'))
 									<div class="alert alert-success alert-block">
 										<button type="button" class="close" data-dismiss="alert">×</button> 

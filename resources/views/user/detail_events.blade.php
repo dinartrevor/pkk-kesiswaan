@@ -29,7 +29,7 @@
               <li class="active"><a href="/events">Events</a></li>
               <li><a href="/ekskul">Extracuricular</a></li>
               <li><a href="/tentang">About</a></li>
-              <li><a href="{{route('forums.index') }}">Forum</a></li>
+              <li><a href="#">Forum</a></li>
               <li class="active"><a class= " navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
             </ul>
           </div>						

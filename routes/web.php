@@ -23,14 +23,21 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,penulis,pengurus']], fun
         'as' => 'artikel.update'
     ]);
     Route::get('/artikel/delete-artikel/{artikel}', 'ArtikelController@destroy');
+    Route::get('/artikel/show/{artikel}', 'ArtikelController@show');
 
     Route::get('/kategori', 'KategoriController@index');
     Route::post('/kategori/add-kategori', 'KategoriController@store')->name('kategori');
+    
     // siswa
     Route::get('/siswa', function () {
         $students = Students::all();
         return view('admin.students.index', compact('students'));
     });
+
+    // comment article
+    Route::get('/comment', 'commentArticleController@index');
+    Route::get('/comment/{artikel}', 'commentArticleController@create');
+    Route::post('/comment/{artikel}/add-comment', 'commentArticleController@store')->name('addComent');
 });
 
 // User

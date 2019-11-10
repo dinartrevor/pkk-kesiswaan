@@ -28,6 +28,10 @@ class Artikel extends Model
 
     public function kategori()
     {
-        return $this->belongsTo('App\Kategori');
+        return $this->belongsTo(Kategori::class);
     }
+     public function comments_article()
+     {
+         return $this->hasMany(CommentArticle::class);
+     }
 }

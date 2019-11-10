@@ -89,4 +89,9 @@ class ArtikelController extends Controller
         $artikel->delete();
         return redirect()->route('artikel')->with('sukses', 'Artikel berhasil dihapus');
     }
+
+    public function show(Artikel $artikel)
+    {
+        return view('admin.artikel.show', ['artikel'=>$artikel]);
+    }
 }
