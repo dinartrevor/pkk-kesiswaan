@@ -1,7 +1,6 @@
-@extends('user.master')
+@extends('layouts.home_page')
 
 @section('content')
-		
 <!-- start banner Area -->
 <section style="box-shadow: 0 -10px 30px inset #000;" class="banner-area relative" id="home" data-parallax="scroll" data-image-src="/images/smk-pi.jpg">
 	<div class="overlay-bg overlay"></div>
@@ -56,119 +55,119 @@
 				</div>
 			</div>							
 		</div>												
-	</div>
+	</div>	
 </section>
-		<!-- End category Area -->
-		
-		<!-- Start travel Area -->
-		<section class="travel-area section-gap" id="travel">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="menu-content pb-70 col-lg-8">
-						<div class="title text-center">
-							<h1 class="mb-10">Events News</h1>
-						</div>
-					</div>
-				</div>						
-				<div class="row">
-					<div class="col-lg-6 travel-left">
-						<div class="single-travel media pb-70">
-							<img class="img-fluid d-flex  mr-3" src="{{ asset('images/porak.jpg') }}" width="200px" height="200px"alt="">
-							<div class="dates">
-								<span>01</span>
-								<p>Dec</p>
-							</div>
-							<div class="media-body align-self-center">
-								<h4 class="mt-0"><a href="#">Pekan Olahraga Nasional</a></h4>
-								<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>							 
-							</div>
-						</div>
-						<div class="single-travel media">
-							<img class="img-fluid d-flex  mr-3" src="{{ asset('images/pentas-seni.jpg') }}" width="200px" height="200px" alt="">
-							<div class="dates">
-								<span>01</span>
-								<p>Nov</p>
-							</div>							  
-							<div class="media-body align-self-center">
-								<h4 class="mt-0"><a href="#">Pentas Seni SMK PI</a></h4>
-								<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>							
-							</div>
-						</div>														
-					</div>
-					<div class="col-lg-6 travel-right">
-						<div class="single-travel media pb-70">
-							<img class="img-fluid d-flex  mr-3" src="/images/74.jpg" alt="" width="250px" height="500px">
-							<div class="dates">
-								<span>17</span>
-								<p>Agu</p>
-							</div>							  
-							<div class="media-body align-self-center">
-								<h4 class="mt-0"><a href="/detail-events">Hut Republik Indonesia Ke 74</a></h4>
-								<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-							</div>
-						</div>
-						<div class="single-travel media">
-							<img class="img-fluid d-flex  mr-3" src="/images/74.jpg" alt="" width="250px" height="500px">
-							<div class="dates">
-								<span>20</span>
-								<p>Dec</p>
-							</div>							  
-							<div class="media-body align-self-center">
-								<h4 class="mt-0"><a href="#">Addiction When Gambling
-									Becomes A Problem</a></h4>
-									<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-								</div>
-							</div>								
-						</div>
-						<a href="acara.html" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tampilkan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>		
-					</div>
-			</div>					
-		</section>
-		<!-- End travel Area -->
-		
-		<!-- Start fashion Area -->
-		<section class="fashion-area section-gap" id="fashion">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="menu-content pb-70 col-lg-8">
-						<div class="title text-center">
-							<h1 class="mb-10">Ekstrakurikuler</h1><hr>
-							<p>Adalah kegiatan non-pelajaran formal yang dilakukan peserta didik sekolah atau universitas, umumnya di luar jam belajar kurikulum standar. Kegiatan-kegiatan ini ada pada setiap jenjang pendidikan dari sekolah dasar sampai universitas. </p>
-						</div>
-					</div>
-				</div>					
-				<div class="row">
-					<div class="col-lg-3 col-md-6 single-fashion">
-						<a href="paskibra.html"><img class="img-fluid" src="/images/paskib.jpg" alt=""></a>
-						<h4 style="margin-top: 15px;"><a href="paskibra.html">PASKIBRA</a></h4>
-						<p>
-							Pasukan Kibaran Bendera 
-						</p>
-					</div>
-					<div class="col-lg-3 col-md-6 single-fashion">
-						<a href="{{route('eskul.create')}}"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
-						<h4 style="margin-top: 15px;"><a href="{{route('eskul.create')}}">MARCHING BAND</a></h4>
-						<p>
-							Tukang Tatalu
-						</p>
-					</div>
-					<div class="col-lg-3 col-md-6 single-fashion">
-						<a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
-						<h4 style="margin-top: 15px;"><a href="pramuka.html">PRAMUKA</a></h4>
-						<p>
-							Praja Muda Karana
-						</p>
-					</div>
-					<div class="col-lg-3 col-md-6 single-fashion">
-						<a href="osis.html"><img class="img-fluid" src="/images/osis.jpg" alt=""></a>
-						<h4 style="margin-top: 15px;"><a href="osis.html">OSIS</a></h4>
-						<p>
-							Oraganisai Siswa Intra Sekolah
-						</p>
-					</div>	
-					<a href="ekstrakulikuler.html" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tamplikan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>						
+<!-- End category Area -->
+
+<!-- Start travel Area -->
+<section class="travel-area section-gap" id="travel">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">Events News</h1>
 				</div>
+			</div>
+		</div>						
+		<div class="row">
+			<div class="col-lg-6 travel-left">
+				<div class="single-travel media pb-70">
+					<img class="img-fluid d-flex  mr-3" src="{{ asset('images/porak.jpg') }}" width="200px" height="200px"alt="">
+					<div class="dates">
+					<span>01</span>
+					<p>Dec</p>
+					</div>
+					<div class="media-body align-self-center">
+					<h4 class="mt-0"><a href="#">Pekan Olahraga Nasional</a></h4>
+					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>							 
+					</div>
+				</div>
+				<div class="single-travel media">
+					<img class="img-fluid d-flex  mr-3" src="{{ asset('images/pentas-seni.jpg') }}" width="200px" height="200px" alt="">
+					<div class="dates">
+					<span>01</span>
+					<p>Nov</p>
+					</div>							  
+					<div class="media-body align-self-center">
+					<h4 class="mt-0"><a href="#">Pentas Seni SMK PI</a></h4>
+					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>							
+					</div>
+				</div>														
+			</div>
+			<div class="col-lg-6 travel-right">
+				<div class="single-travel media pb-70">
+					<img class="img-fluid d-flex  mr-3" src="/images/74.jpg" alt="" width="250px" height="500px">
+					<div class="dates">
+					<span>17</span>
+					<p>Agu</p>
+					</div>							  
+					<div class="media-body align-self-center">
+					<h4 class="mt-0"><a href="/detail-events">Hut Republik Indonesia Ke 74</a></h4>
+					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
+					</div>
+				</div>
+				<div class="single-travel media">
+					<img class="img-fluid d-flex  mr-3" src="/images/74.jpg" alt="" width="250px" height="500px">
+					<div class="dates">
+					<span>20</span>
+					<p>Dec</p>
+					</div>							  
+					<div class="media-body align-self-center">
+					<h4 class="mt-0"><a href="#">Addiction When Gambling
+					Becomes A Problem</a></h4>
+					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
+					</div>
+				</div>								
+			</div>
+			<a href="acara.html" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tampilkan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>		
+		</div>
+	</div>					
+</section>
+<!-- End travel Area -->
+
+<!-- Start fashion Area -->
+<section class="fashion-area section-gap" id="fashion">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">Ekstrakurikuler</h1><hr>
+					<p>Adalah kegiatan non-pelajaran formal yang dilakukan peserta didik sekolah atau universitas, umumnya di luar jam belajar kurikulum standar. Kegiatan-kegiatan ini ada pada setiap jenjang pendidikan dari sekolah dasar sampai universitas. </p>
+				</div>
+			</div>
+		</div>					
+		<div class="row">
+			<div class="col-lg-3 col-md-6 single-fashion">
+				<a href="paskibra.html"><img class="img-fluid" src="/images/paskib.jpg" alt=""></a>
+				<h4 style="margin-top: 15px;"><a href="paskibra.html">PASKIBRA</a></h4>
+				<p>
+					Pasukan Kibaran Bendera 
+				</p>
+			</div>
+			<div class="col-lg-3 col-md-6 single-fashion">
+				<a href="marching-band.html"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
+			<h4 style="margin-top: 15px;"><a href="">MARCHING BAND</a></h4>
+				<p>
+					Tukang Tatalu
+				</p>
+			</div>
+			<div class="col-lg-3 col-md-6 single-fashion">
+				<a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
+				<h4 style="margin-top: 15px;"><a href="pramuka.html">PRAMUKA</a></h4>
+				<p>
+					Praja Muda Karana
+				</p>
+			</div>
+			<div class="col-lg-3 col-md-6 single-fashion">
+				<a href="osis.html"><img class="img-fluid" src="/images/osis.jpg" alt=""></a>
+				<h4 style="margin-top: 15px;"><a href="osis.html">OSIS</a></h4>
+				<p>
+					Oraganisai Siswa Intra Sekolah
+				</p>
 			</div>	
-		</section>
-			<!-- End fashion Area -->
+			<a href="ekstrakulikuler.html" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tamplikan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>						
+		</div>
+	</div>	
+</section>
+<!-- End fashion Area -->
 @endsection
