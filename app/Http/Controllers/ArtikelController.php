@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Artikel;
 use App\Kategori;
+use App\ComentsArticle;
 use Session;
 
 class ArtikelController extends Controller
@@ -73,6 +74,7 @@ class ArtikelController extends Controller
             'kategori' => 'required'
         ],$messages);
 
+        $artikel->slug = null;
         $artikel->update([
             'judul' => $request->judul,
             'thumbnail' => $request->thumbnail,
@@ -92,6 +94,7 @@ class ArtikelController extends Controller
 
     public function show(Artikel $artikel)
     {
-        return view('admin.artikel.show', ['artikel'=>$artikel]);
+        $coment = ComentsArticle::all();
+        return view('admin.artikel.show', ['artikel'=>$artikel, 'coment'=>$coment]);
     }
 }

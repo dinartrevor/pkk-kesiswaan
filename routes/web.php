@@ -35,8 +35,6 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,penulis,pengurus']], fun
     });
 
     // comment article
-    Route::get('/comment', 'commentArticleController@index');
-    Route::get('/comment/{artikel}', 'commentArticleController@create');
     Route::post('/comment/{artikel}/add-comment', 'commentArticleController@store')->name('addComent');
 });
 

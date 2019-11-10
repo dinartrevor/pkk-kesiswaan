@@ -44,17 +44,23 @@
               <tr>
                 <td>{{$no++}}</td>
                 <td><img src="{{$a->thumbnail}}" style="width: 100px; height: 50px"></td>
-                <td><a class="judul" href="#" data-type="text" data-pk="{{$a->id}}" data-url="/api/artikel/{{$a->id}}/editArtikel" data-title="Enter Title">{{$a->judul}}</a></td>
+                <td>
+                  @if ($a->status == 'draft')
+                  <a class="judul" href="#" data-type="text" data-pk="{{$a->id}}" data-url="/api/artikel/{{$a->id}}/editArtikel" data-title="Enter Title">{{$a->judul}}</a>
+                  @else
+                  {{$a->judul}}
+                  @endif
+                </td>
                 @if ($a->kategori_id)
                 <td>{{$a->kategori->nama_kategori}}</td>
                 @endif
                 <td>{{$a->created_at->format('d M Y')}}</td>
                 <td>
-                  @if ($a->status == "publish")
-                    <span class="label bg-green">PUBLISH</span>
-                  @else
-                    <span class="label bg-yellow">DRAFT</span>
-                  @endif
+                @if ($a->status == "publish")
+                  <span class="label bg-green">PUBLISH</span>
+                @else
+                  <span class="label bg-yellow">DRAFT</span>
+                @endif
                 </td>
                 <td class="text-center">
                   <a class="btn btn-info btn-flat" href="{{url('/artikel/show/'.$a->id)}}"><i class="fa fa-eye"></i></a>
