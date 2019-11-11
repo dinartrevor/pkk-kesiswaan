@@ -39,6 +39,11 @@ class User extends Authenticatable
 
     public function comments_article()
     {
-        return $this->hasMany('App\CommentsArticle');
+        return $this->hasMany(CommentsArticle::class);
+    }
+
+    public function extracurricular()
+    {
+        return $this->hasOne(Extracurricular::class);
     }
 }

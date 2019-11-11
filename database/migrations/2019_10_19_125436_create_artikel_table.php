@@ -20,8 +20,8 @@ class CreateArtikelTable extends Migration
             $table->text('thumbnail');
             $table->text('konten');
             $table->enum('status', ['draft', 'publish'])->default('draft');
-            $table->integer('user_id');
-            $table->integer('kategori_id')->nullable();
+            $table->bigInteger('user_id');
+            $table->bigInteger('kategori_id')->nullable();
             $table->timestamps();
         });
     }

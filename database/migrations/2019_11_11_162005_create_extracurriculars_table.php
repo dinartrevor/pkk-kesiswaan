@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComentsArticlesTable extends Migration
+class CreateExtracurricularsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateComentsArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('coments_articles', function (Blueprint $table) {
+        Schema::create('extracurriculars', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('article_id');
+            $table->string('name');
+            $table->text('descriptions')->nullable();
             $table->bigInteger('user_id');
-            $table->text('content');
+            $table->string('name_coach');
+            $table->string('email');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateComentsArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coments_articles');
+        Schema::dropIfExists('extracurriculars');
     }
 }
