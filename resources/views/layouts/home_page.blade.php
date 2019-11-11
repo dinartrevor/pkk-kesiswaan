@@ -26,9 +26,10 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <li class="active"><a href="#home">Home</a></li>
+                            <li class="active"><a href="#home">Beranda</a></li>
                             <li><a href="/artikel">Artikel</a></li>
-                            <li><a href="/tentang">About</a></li>
+                            <li><a href="/tentang">Tentang</a></li>
+                            <li><a href="/ekstrakulikuler">Ekstrakurikuler</a></li>
                             <li><a href="#">Forum</a></li>
                             <li class="active"><a class= " navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
                         </ul>
