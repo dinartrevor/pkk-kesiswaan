@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Extracurricular;
-use App\Members;
+use App\ExtracurricularStudent;
 use App\User;
 use Session;
 
@@ -66,7 +66,8 @@ class ExtracurricularController extends Controller
      */
     public function show(Extracurricular $extracurricular)
     {
-      return view('admin.extracurricular.showMembers', compact('extracurricular'));
+      $members = ExtracurricularStudent::all();
+      return view('admin.extracurricular.showMembers', compact('extracurricular','members'));
     }
 
     /**

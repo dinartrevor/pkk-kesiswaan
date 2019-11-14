@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\Members;
 use App\Extracurricular;
 use App\Students;
+use App\ExtracurricularStudent;
 
 class MembersController extends Controller
 {
@@ -24,18 +24,16 @@ class MembersController extends Controller
 
 	public function store(Request $request, Extracurricular $extracurricular)
 	{
-		$students = new \App\Students;
-		$members = new \App\Members;
-		if ($request->nis == $students->nis) {
-			$request->all();
-			$members->extracurricular_id = $extracurricular->id;
-			$members->save();
-			return $members;
-		}else if ($request->nis != $students->nis) {
-			# code...
-			return "gagal";
+		if (auth()->user()) {
+			$students = Students::where('nis', $request->nis)->first();
+			$members = ExtracurricularStudent::create([
+				'students_id' => $students->id,
+				'extracurriculars_id' => $extracurricular->id
+			]);
+			return redirect()->back()->with('sukses', 'Anda telah terdaftar sebagai anggota '.$extracurricular->name);
+		}else{
+			return redirect('/');
 		}
-
 	}
 
 	public function show($id)

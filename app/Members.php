@@ -17,6 +17,6 @@ class Members extends Model
 
     public function extracurricular()
     {
-        return $this->belongsTo(Extracurricular::class);
+        return $this->belongsToMany(Extracurricular::class);
     }
 }

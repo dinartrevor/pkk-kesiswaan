@@ -15,8 +15,8 @@ class Extracurricular extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function members()
+    public function extracurricular_student()
     {
-        return $this->hasMany(Members::class);
+        return $this->hasMany(ExtracurricularStudent::class);
     }
 }
