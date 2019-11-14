@@ -26,12 +26,6 @@
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
-          @if (notArtikel() == date('Y-m-d'))
-              
-          @endif
-          <span class="pull-right-container">
-            <span class="label label-primary pull-right">{{notArtikel()}}</span>
-          </span>
         </a>
         <ul class="treeview-menu">
           <li class="{{Request::is('artikel/new-artikel')?'active':''}}"><a href="/artikel/new-artikel"><i class="fa fa-circle-o"></i> Add new Article</a></li>
@@ -39,8 +33,17 @@
         </ul>
       </li>
       <li class="{{Request::is('kategori')?'active':''}}"><a href="/kategori"><i class="fa fa-tags"></i> <span>Category</span></a></li>
-      <li><a href="#"><i class="fa fa-users"></i> <span>Ekstrakurikuler</span></a></li>
-
+      <li class="treeview {{Request::is('extracurricular', 'extracurricular/new-extracurricular')?'active':''}}">
+        <a href="#"><i class="fa fa-users"></i> <span>Extracurricular</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="{{Request::is('extracurricular/new-extracurricular')?'active':''}}"><a href="/extracurricular/new-extracurricular"><i class="fa fa-circle-o"></i> Add new Extracurricular</a></li>
+          <li class="{{Request::is('extracurricular')?'active':''}}"><a href="/extracurricular"><i class="fa fa-circle-o"></i> All Extracurricular</a></li>
+        </ul>
+      </li>
     </ul>
     <!-- /.sidebar-menu -->
   </section>

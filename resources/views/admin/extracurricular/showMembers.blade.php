@@ -1,8 +1,4 @@
 @extends('admin.master')
-@section('header')
-  <!-- editable -->
-  <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
-@endsection
 @section('content')
 <section class="content-header">
   <h1>
@@ -19,29 +15,17 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-            <form action="{{route('kategori')}}" method="post">
-              {{ csrf_field() }}
-              <div class="form-group {{$errors->has('nama_kategori') ? 'has-error' : ''}}">
-                <div class="input-group col-md-4">
-                  <input id="kategori" class="form-control" type="text" name="nama_kategori" placeholder="Enter Category">
-                    <span class="input-group-btn">
-                      <button type="submit" class="btn btn-primary btn-flat">
-                        <i class="fa fa-plus"></i> Add
-                      </button>
-                    </span>
-                  </div>
-                  @if ($errors->has('nama_kategori'))
-                    <span class="help-block">{{$errors->first('nama_kategori')}}</span>
-                  @endif
-              </div>
-            </form>
+          
         </div>
         <div class="box-body">
           <table id="tabelKaryawan" class="table table-striped table-bordered">
             <thead>
               <tr>
                 <th>NO</th>
-                <th>Nama Kategori</th>
+                <th>NIS</th>
+                <th>Nama</th>
+                <th>Kelas</th>
+                <th>Jurusan</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -49,15 +33,16 @@
               @php
                   $no =1
               @endphp
-              @foreach ($kategori as $k)
               <tr>
                 <td>{{$no++}}</td>
-                <td>{{$k->nama_kategori}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td class="text-center">
-                  <a class="btn btn-danger btn-flat delete" href="#" artikel-id = "{{$k->id}}"><i class="fa fa-minus"></i></a>
+                  {{-- <a class="btn btn-danger btn-flat delete" href="#" artikel-id = "{{$k->id}}"><i class="fa fa-minus"></i></a> --}}
                 </td>
               </tr>
-              @endforeach
             </tbody>
           </table>
         </div>

@@ -36,6 +36,15 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,penulis,pengurus']], fun
 
     // comment article
     Route::post('/comment/{artikel}/add-comment', 'commentArticleController@store')->name('addComent');
+
+    // Ekskul
+    Route::get('/extracurricular', 'ExtracurricularController@index');
+    Route::get('/extracurricular/new-extracurricular', 'ExtracurricularController@create');
+    Route::post('/extracurricular/new-extracurricular/add-extracurricular', 'ExtracurricularController@store')->name('extracurricular');
+    Route::get('/extracurricular/edit-extracurricular/{extracurricular}', 'ExtracurricularController@edit');
+    Route::post('/extracurricular/edit-extracurricular/{extracurricular}/update-extracurricular', 'ExtracurricularController@update')->name('extracurricular.update');
+    Route::get('/extracurricular/delete-extracurricular/{extracurricular}', 'ExtracurricularController@destroy');
+    Route::get('/extracurricular/show-extracurricular/{extracurricular}', 'ExtracurricularController@show')->name('extracurricular.show');
 });
 
 // User
@@ -48,10 +57,13 @@ Route::get('/events', function () {
 Route::get('/ekskul', function () {
     return view('user.eskul');
 });
-
 Route::get('/tentang', function () {
     return view('user.tentang');
 });
+Route::get('/members', 'MembersController@index');
+Route::get('/members/{extracurricular}', 'MembersController@create');
+Route::post('/members/{extracurricular}/new-member', 'MembersController@store')->name('member');
+
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     '\vendor\uniSharp\LaravelFilemanager\Lfm::routes()';
 });
