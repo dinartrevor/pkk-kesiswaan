@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Artikel;
 use App\User;
 use App\ComentsArticle;
+use Session;
 
 class commentArticleController extends Controller
 {
@@ -24,12 +25,12 @@ class commentArticleController extends Controller
     public function store(Request $request, Artikel $artikel)
     {
         ComentsArticle::create([
-            'article_id' => $artikel->id,
+            'artikel_id' => $artikel->id,
             'user_id' =>auth()->user()->id,
             'content' => $request->content,
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with('sukses', 'Komentar berhasil dikirim');
     }
 
     public function show($id)

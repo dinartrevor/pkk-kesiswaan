@@ -62,6 +62,7 @@
                   <span class="label bg-yellow">DRAFT</span>
                 @endif
                 </td>
+                
                 <td class="text-center">
                   <a class="btn btn-info btn-flat" href="{{url('/artikel/show/'.$a->id)}}"><i class="fa fa-eye"></i></a>
                   @if ($a->status == "draft")

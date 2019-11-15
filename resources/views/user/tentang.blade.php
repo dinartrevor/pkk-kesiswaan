@@ -1,20 +1,4 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="/images/elements/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Tentang</title>
+@extends('user.master')
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -145,90 +129,12 @@
 																	
 					</div>	
 				</section>
-				<div class="container">
-					<div class="col-md-12">
-						<div class="justify-content-center">
-							<h3 class="text-center">Kontak Kami</h3>
-							<hr width="50%" style="border: 1px solid black"><br>
-							<form class="form">
-								<div class="form-group">
-									<label style="color: rgb(0, 0, 0);"><b style="color: black">Nama Lengkap</b></label>
-									<input type="text" class="form-control" autocomplete="off" placeholder="Masukkan Nama" ><br>
-									<label style="color: rgb(0, 0, 0);">E-Mail</label>
-									<input type="email" class="form-control"  autocomplete="off" placeholder="Masukkan Email" ><br>
-									<label style="color: rgb(0, 0, 0);">Pesan</label>
-									<textarea name="" id="" cols="10" rows="10" placeholder="Tuliskan Pesan..." class="form-control"></textarea> <br>
-									<button type="submit" class="primary-btn">Kirim<span><i class="fa fa-paper-plane" style="color: white;"></i></span></button>                             
-								</div> 
-							
-							</form>
-						</div>
-					</div>
-				</div>
+	
 				
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6  col-md-12">
-							<div class="single-footer-widget">
-								<h6>SMK PRAKARYA INTERNASIONAL</h6>
-								<ul class="footer-nav">
-									<li><a href="#">Acara</a></li>
-									<li><a href="#">Ekstrakurikuler</a></li>
-									<li><a href="#">Tentang</a></li>
-									<li><a href="#">login</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3  col-md-12">
-							<div class="single-footer-widget mail-chimp">
-								<h6 class="mb-20">Ekstrakurikuler</h6>
-								<ul class="footer-nav">
-									<li><a href="#">Pramuka</a></li>
-									<li><a href="#">Osis</a></li>
-									<li><a href="#">Marching Band</a></li>
-									<li><a href="#">Paskibra</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3  col-md-12">
-								<div class="single-footer-widget mail-chimp">
-									<h6 class="mb-20">Acara</h6>
-									<ul class="footer-nav">
-										<li><a href="#">HUT-RI</a></li>
-										<li><a href="#">Pentas Seni</a></li>
-										<li><a href="#">Pekan Olahraga</a></li>
-										<li><a href="#">Donor Darah</a></li>
-									</ul>
-								</div>
-							</div>						
-					</div>
-
-					<div class="row footer-bottom d-flex justify-content-between">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						<p class="col-lg-8 col-sm-12 footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | by <a href="https://colorlib.com" target="_blank">Koala Development</a></p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						<div class="col-lg-4 col-sm-12 footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!-- End footer Area -->		
-
 		</div>
-		<script src="/asset-user/js/vendor/jquery-2.2.4.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-		<script src="/asset-user/js/vendor/bootstrap.min.js"></script>
-		<script src="/asset-user/js/jquery.ajaxchimp.min.js"></script>
-		<script src="/asset-user/js/jquery.sticky.js"></script>
-		<script src="/asset-user/js/owl.carousel.min.js"></script>
-		<script src="/asset-user/js/jquery.nice-select.min.js"></script>
-		<script src="/asset-user/js/jquery.magnific-popup.min.js"></script>
-		<script src="/asset-user/js/main.js"></script>
-	</body>
-</html>
+	</div>	
+												
+</div>	
+</section>		
+
+				

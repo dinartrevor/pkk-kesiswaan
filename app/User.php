@@ -46,4 +46,12 @@ class User extends Authenticatable
     {
         return $this->hasOne(Extracurricular::class);
     }
+    public function artikel()
+    {
+        return $this->hasMany(Artikel::class);
+    }
+    public function forums()
+    {
+        return $this->hasMany(Forums::class);
+    }
 }

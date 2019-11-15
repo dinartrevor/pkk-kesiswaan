@@ -1,178 +1,307 @@
-<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="author" content="colorlib">
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta charset="UTF-8">
-		<title>E - Mading</title>
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-		<link rel="stylesheet" href="/asset-user/css/linearicons.css">
-		<link rel="stylesheet" href="/asset-user/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/asset-user/css/bootstrap.css">
-		<link rel="stylesheet" href="/asset-user/css/owl.carousel.css">
-		<link rel="stylesheet" href="/asset-user/css/main.css">
-		<link rel="stylesheet" href="/asset-user/css/style.css">
-		<link rel="icon" href="/images/pi.jpeg" type="image/icon"/>
-		</head>
-		<body>
-			<section class="generic-banner relative">
-          <!-- Start Header Area -->
-          <header class="default-header">
-              <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                  <a class="navbar-brand" href="/" style="font-weight: 500;"><img src="/images/pi.jpeg" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                      <li><a href="/">Home</a></li>
-                      <li><a href="/events">Events</a></li>
-                      <li class="active"><a>Extracuricular</a></li>
-                      <li><a href="/tentang">About</a></li>
-                      <li><a href="#">Forum</a></li>
-                      <li class="active"><a class= "navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
-                    </ul>
-                  </div>						
-                </div>
-              </nav>
-            </header>
-          <!-- End Header Area -->				
-            <div class="container">
-              <div class="row height align-items-center justify-content-center">
-                <div class="col-lg-10">
-                  <div class="generic-banner-content">
-                    <h2 class="text-white text-center">Ekstrakurikuler</h2>
-                    <p class="text-white">Adalah kegiatan non-pelajaran formal yang dilakukan peserta didik sekolah atau universitas, umumnya di luar jam belajar kurikulum standar. Kegiatan-kegiatan ini ada pada setiap jenjang pendidikan dari sekolah dasar sampai universitas.</p>
-                  </div>							
-                </div>
-              </div>
-            </div>
-      </section>
-      <section class="fashion-area section-gap" id="fashion">
-          <div class="container">
-            <div class="row d-flex justify-content-center">
-              <div class="menu-content pb-70 col-lg-8">
-                <div class="title text-center">
-                  <h1 class="mb-10">EKSTRAKURIKULER SMK PI</h1>
-                </div>
-              </div>
-            </div>					
-            <div class="row">
-              <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="paskibra.html"><img class="img-fluid" src="/images/paskib.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="paskibra.html">PASKIBRA</a></h4>
-              </div>
-              <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="#"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="#">MARCHING BAND</a></h4>
-              </div>
-              <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="pramuka.html">PRAMUKA</a></h4>
-              </div>
-              <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="osis.html"><img class="img-fluid" src="/images/osis.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="osis.html">OSIS</a></h4>
-              </div>
-              <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="osis.html"><img class="img-fluid" src="/images/osis.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="osis.html">VOLLY</a></h4>
-              </div>
-              <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="osis.html"><img class="img-fluid" src="/images/futsal.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="osis.html">FUTSAL</a></h4>
-              </div>
-              <div class="col-lg-3 col-md-6 single-fashion">
-                <a href="osis.html"><img class="img-fluid" src="/images/osis.jpg" alt=""></a>
-                <h4 style="margin-top: 15px;"><a href="osis.html">KOPI</a></h4>
-              </div>	
-              <div class="col-lg-3 col-md-6 single-fashion">
-                  <a href="pramuka.html"><img class="img-fluid" src="/images/perkusi.jpeg" alt="" height="500"></a>
-                  <h4 style="margin-top: 15px;"><a href="pramuka.html">PERKUSI</a></h4>
-              </div>
-              <div class="col-lg-3 col-md-6 single-fashion">
-                  <a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
-                  <h4 style="margin-top: 15px;"><a href="pramuka.html">MATH CLUB</a></h4>
-                </div>
-                <div class="col-lg-3 col-md-6 single-fashion">
-                    <a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
-                    <h4 style="margin-top: 15px;"><a href="pramuka.html">ENGLISH CLUB</a></h4>
-                  </div>
-                  <div class="col-lg-3 col-md-6 single-fashion">
-                      <a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
-                      <h4 style="margin-top: 15px;"><a href="pramuka.html">TEATER</a></h4>
-                    </div>
-                    <div class="col-lg-3 col-md-6 single-fashion">
-                        <a href="pramuka.html"><img class="img-fluid" src="/images/rohis.jpg" alt=""></a>
-                        <h4 style="margin-top: 15px;"><a href="pramuka.html">ROHIS</a></h4>
+@extends('user.master')
+
+@section('content')
+<section style="box-shadow: 0 -10px 30px inset #000;" class="banner-area relative" id="home" data-parallax="scroll" data-image-src="/images/girl-pi.jpg">
+	<div class="overlay-bg overlay"></div>
+	<div class="container">
+		<div class="row fullscreen">
+			<div class="banner-content d-flex align-items-center col-lg-12 col-md-12">
+				<div>
+					<h1 style="text-shadow: 2px 2px #000;">ARTIKEL<br><span style="font-weight: 300; text-shadow: 2px 2px 2px #000;">SMK PRAKARYA INTERNASIONAL</span></h1>
+					<p style="color:white; font-size: 25px; font-weight: 200; text-shadow: 2px 2px #000;"></p>
+				</div>	
+			</div>												
+		</div>
+	</div>
+</section>
+
+
+<!-- Start post Area -->
+<div class="post-wrapper pt-100">
+<!-- Start post Area -->
+<section class="post-area">
+<div class="container">
+  <div class="row justify-content-center d-flex">
+      <div class="col-lg-8">
+          <div class="post-lists search-list">
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
                       </div>
-              <!-- <a href="#" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tamplikan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>						 -->
-            </div>
-          </div>	
-        </section>
-        <!-- Start footer Area -->
-        <footer class="footer-area section-gap">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6  col-md-12">
-                  <div class="single-footer-widget">
-                    <h6>SMK PRAKARYA INTERNASIONAL</h6>
-                    <ul class="footer-nav">
-                      <li><a href="#">Acara</a></li>
-                      <li><a href="#">Ekstrakurikuler</a></li>
-                      <li><a href="#">Tentang</a></li>
-                      <li><a href="#">login</a></li>
-                    </ul>
+                      <a href=""><img src="/images/f1.jpg" alt=""></a>
                   </div>
-                </div>
-                <div class="col-lg-3  col-md-12">
-                  <div class="single-footer-widget mail-chimp">
-                    <h6 class="mb-20">Ekstrakurikuler</h6>
-                    <ul class="footer-nav">
-                      <li><a href="#">Pramuka</a></li>
-                      <li><a href="#">Osis</a></li>
-                      <li><a href="#">Marching Band</a></li>
-                      <li><a href="#">Paskibra</a></li>
-                    </ul>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Ekstrakulikuler Pramuka <br>
+                        SMK Prakarya Internasional</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-users" aria-hidden="true"></i>
+                      <a href="#" >Ekstrakulikuler</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
                   </div>
-                </div>
-                <div class="col-lg-3  col-md-12">
-                    <div class="single-footer-widget mail-chimp">
-                      <h6 class="mb-20">Acara</h6>
-                      <ul class="footer-nav">
-                        <li><a href="#">HUT-RI</a></li>
-                        <li><a href="#">Pentas Seni</a></li>
-                        <li><a href="#">Pekan Olahraga</a></li>
-                        <li><a href="#">Donor Darah</a></li>
-                      </ul>
-                    </div>
-                  </div>						
               </div>
-    
-              <div class="row footer-bottom d-flex justify-content-between">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                <p class="col-lg-8 col-sm-12 footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | by <a href="https://colorlib.com" target="_blank">Koala Development</a></p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                <div class="col-lg-4 col-sm-12 footer-social">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                  <a href="#"><i class="fa fa-behance"></i></a>
-                </div>
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
+                      </div>
+                     <a href=""><img src="/images/f2.jpg" alt=""></a>
+                  </div>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Acara E-Sport Mobile Legend <br>
+                      SMK Prakarya Internasional</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-newspaper-o" aria-hidden="true" style="color:black;"></i>
+                      <a href="#">Acara</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
+                  </div>
               </div>
-            </div>
-          </footer>
-        <!-- End footer Area -->		
-  
-      <script src="/asset-user/js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-			<script src="/asset-user/js/vendor/bootstrap.min.js"></script>
-			<script src="/asset-user/js/jquery.ajaxchimp.min.js"></script>
-			<script src="/asset-user/js/parallax.min.js"></script>			
-			<script src="/asset-user/js/owl.carousel.min.js"></script>		
-			<script src="/asset-user/js/jquery.magnific-popup.min.js"></script>				
-			<script src="/asset-user/js/jquery.sticky.js"></script>
-			<script src="/asset-user/js/main.js"></script>	
-		</body>
-    </body>
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
+                      </div>
+                      <img src="images/f3.jpg" alt="">
+                  </div>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Addiction When Gambling <br>
+                      Becomes A Problem</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      <a href="#">06 Likes</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
+                  </div>
+              </div>
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
+                      </div>
+                      <img src="images/f4.jpg" alt="">
+                  </div>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Addiction When Gambling <br>
+                      Becomes A Problem</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      <a href="#">06 Likes</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
+                  </div>
+              </div> 
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
+                      </div>
+                      <img src="images/f1.jpg" alt="">
+                  </div>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Addiction When Gambling <br>
+                      Becomes A Problem</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      <a href="#">06 Likes</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
+                  </div>
+              </div>
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
+                      </div>
+                      <img src="images/f2.jpg" alt="">
+                  </div>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Addiction When Gambling <br>
+                      Becomes A Problem</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      <a href="#">06 Likes</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
+                  </div>
+              </div>
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
+                      </div>
+                      <img src="images/f3.jpg" alt="">
+                  </div>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Addiction When Gambling <br>
+                      Becomes A Problem</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      <a href="#">06 Likes</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
+                  </div>
+              </div>
+              <div class="single-list flex-row d-flex">
+                  <div class="thumb">
+                      <div class="date">
+                          <span>20</span><br>Dec
+                      </div>
+                      <img src="images/f4.jpg" alt="">
+                  </div>
+                  <div class="detail">
+                      <a href="#"><h4 class="pb-20">Addiction When Gambling <br>
+                      Becomes A Problem</h4></a>
+                      <p>
+                          inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate behavior Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <p class="footer pt-20">
+                      <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      <a href="#">06 Likes</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+                      </p>
+                  </div>
+              </div>                             
+              <div class="justify-content-center d-flex">
+                  <a class="text-uppercase primary-btn loadmore-btn mt-40 mb-60" href="#"> Load More Post</a>
+              </div>                                                                     
+          </div>                          
+      </div>
+      <div class="col-lg-4 sidebar-area">
+          <div class="single_widget search_widget">
+              <div id="imaginary_container"> 
+                  <div class="input-group stylish-input-group">
+                      <select name="" class="form-control" id="">
+                        <option value="">-- Pilih Kategori Artikel --</option>
+                        <option value="">Acara</option>
+                        <option value="">Ekstrakulikuler</option>
+                      </select>
+                  </div>
+              </div> 
+          </div>
+
+          <div class="single_widget about_widget">
+              <img src="images/team1.jpg" alt="">
+              <h2 class="text-uppercase">Adele Gonzalez</h2>
+              <p>
+                  MCSE boot camps have its supporters and
+                  its detractors. Some people do not understand why you should have to spend money
+              </p>
+              <div class="social-link">
+                  <a href="#"><button class="btn"><i class="fa fa-facebook" aria-hidden="true"></i> Like</button></a>
+                  <a href="#"><button class="btn"><i class="fa fa-twitter" aria-hidden="true"></i> follow</button></a>
+              </div>
+          </div>
+          <div class="single_widget cat_widget">
+              <h4 class="text-uppercase pb-20">post categories</h4>
+              <ul>
+                  <li>
+                      <a href="#">Technology <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Lifestyle <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Fashion <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Art <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Food <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Architecture <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Adventure <span>37</span></a>
+                  </li>                                
+              </ul>
+          </div>
+          <div class="single_widget recent_widget">
+              <h4 class="text-uppercase pb-20">Recent Posts</h4>
+              <div class="active-recent-carusel">
+                  <div class="item">
+                      <img src="img/asset/slider.jpg" alt="">
+                      <p class="mt-20 title text-uppercase">Home Audio Recording <br>
+                      For Everyone</p>
+                      <p>02 Hours ago <span> <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      06 <i class="fa fa-comment-o" aria-hidden="true"></i>02</span></p>    
+                  </div>  
+                  <div class="item">
+                      <img src="img/asset/slider.jpg" alt="">
+                      <p class="mt-20 title text-uppercase">Home Audio Recording <br>
+                      For Everyone</p>
+                      <p>02 Hours ago <span> <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      06 <i class="fa fa-comment-o" aria-hidden="true"></i>02</span></p>    
+                  </div>  
+                  <div class="item">
+                      <img src="img/asset/slider.jpg" alt="">
+                      <p class="mt-20 title text-uppercase">Home Audio Recording <br>
+                      For Everyone</p>
+                      <p>02 Hours ago <span> <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      06 <i class="fa fa-comment-o" aria-hidden="true"></i>02</span></p>    
+                  </div>                                                                                            
+              </div>
+          </div>  
+          <div class="single_widget cat_widget">
+              <h4 class="text-uppercase pb-20">post archive</h4>
+              <ul>
+                  <li>
+                      <a href="#">Dec'17 <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Nov'17 <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Oct'17 <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Sept'17 <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Aug'17 <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Jul'17 <span>37</span></a>
+                  </li>
+                  <li>
+                      <a href="#">Jun'17 <span>37</span></a>
+                  </li>                                
+              </ul>
+          </div> 
+          <div class="single_widget tag_widget">
+              <h4 class="text-uppercase pb-20">Tag Clouds</h4>
+              <ul>
+                  <li><a href="#">Lifestyle</a></li>
+                  <li><a href="#">Art</a></li>
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Food</a></li>
+                  <li><a href="#">Technology</a></li>
+                  <li><a href="#">Fashion</a></li>
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Food</a></li>
+                  <li><a href="#">Technology</a></li>
+              </ul>
+          </div>                                                 
+      </div>
+  </div>
+</div>    
+</section>
+<!-- End post Area -->  
+</div>
+@endsection

@@ -8,7 +8,7 @@ use App\Artikel;
 use App\Kategori;
 use App\ComentsArticle;
 use Session;
-
+use Illuminate\Support\Str;
 class ArtikelController extends Controller
 {
     public function index()
@@ -94,7 +94,29 @@ class ArtikelController extends Controller
 
     public function show(Artikel $artikel)
     {
-        $coment = ComentsArticle::all();
-        return view('admin.artikel.show', ['artikel'=>$artikel, 'coment'=>$coment]);
+        $coment = ComentsArticle::all()->where('artikel_id',$artikel->id);
+        $kategori=Kategori::withCount('Artikel')->get();
+        $artikel_terbaru=Artikel::orderBy('id', 'DESC')->limit(2)->get();
+        return view('user.detail_artikel', ['artikel'=>$artikel, 'coment'=>$coment, 'kategori'=>$kategori, 'artikel_terbaru'=>$artikel_terbaru,]);
     }
+    public function user(Artikel $artikel)
+    {
+        $coment = ComentsArticle::all()->where('artikel_id',$artikel->id);
+        $artikel = Artikel::paginate(4);
+        $kategori = Kategori::all();
+        $kategori=Kategori::withCount('Artikel')->get();
+        $artikel_terbaru=Artikel::orderBy('id', 'DESC')->limit(2)->get();
+        return view('user.artikel', compact('artikel','kategori','artikel_terbaru','coment'));
+    }
+    public function homeUser(Artikel $artikel)
+    {
+        $coment = ComentsArticle::all()->where('artikel_id',$artikel->id);
+        $artikel = Artikel::limit(4)->get();
+        $kategori = Kategori::all();
+        $kategori=Kategori::withCount('Artikel')->get();
+        $artikel_random=Artikel::orderBy('id', 'DESC')->limit(3)->get();
+        return view('user.index', compact('artikel','kategori','artikel_random','coment'));
+        
+    }
+
 }

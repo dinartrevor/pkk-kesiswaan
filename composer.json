@@ -10,6 +10,8 @@
     "require": {
         "php": "^7.1.3",
         "cviebrock/eloquent-sluggable": "4.8",
+        "devdojo/chatter": "0.1.*",
+        "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
