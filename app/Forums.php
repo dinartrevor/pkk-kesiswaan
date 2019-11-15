@@ -3,13 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Comments;
+
 class Forums extends Model
 {
-    protected $table='forums';
-    protected $guarded = ['id'];
+    protected $table = "forums";
+    protected $fillable = ['user_id', 'thumbnail', 'content'];
 
-    public function Comments(){
-        return $this->hasMany('App\Comments','forums_id','id');
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function forums_comments()
+    {
+        return $this->hasMany(CommentsForums::class);
     }
 }

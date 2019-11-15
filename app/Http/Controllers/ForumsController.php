@@ -3,97 +3,85 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Forums;
-
+use App\User;
+use App\Kategori;
+use App\CommentsForums;
+use App\ReplyComments;
+use Session;
 class ForumsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $forums=Forums::latest()->get();
-        return view('user.forums.index', compact('forums'));
+        $forums = Forums::all();
+        return view('admin.forums.index', compact('forums'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function newForums()
     {
-        return view('user.forums.create');
+        
+        return view('admin.forums.newForums');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
-    {
+    {   
+        $messages = [
+            'required' => ':attribute wajib diisi',
+            'min' => ':attribute harus diisi minimal :min karakter',
+            'max' => ':attribute diisi maksimal :max karakter'
+        ];
+
         $this->validate($request,[
-            'title'=>'required',
-            'fill_title'=>'required',
+            'content' => 'required'
+            
+        ],$messages);
+
+        $forums = Forums::create([
+            'thumbnail' => $request->thumbnail,
+            'content' => $request->content,
+            'user_id' => auth()->user()->id
         ]);
-        Forums::create($request->all());
-        return redirect()->route('forums.index')->with('success', 'Selamat anda telah bertanya');
+        return redirect()->back()->with('sukses', 'forum berhasil ditambahkan');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function show(Forums $forums)
     {
-        //
+        $comments = CommentsForums::all()->where('forums_id',$forums->id);
+        $kategori = Kategori::all();
+        $forum_comment = Forums::orderBy('id','DESC')->get();
+        // $kategori=Kategori::withCount('Artikel')->get();
+        // $artikel_terbaru=Artikel::orderBy('id', 'DESC')->limit(2)->get();
+        return view('user.forum.detail_forums', ['forums'=>$forums, 'comments'=>$comments, 'kategori'=>$kategori, 'forum_comment'=>$forum_comment]);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function forumUser(Forums $forums)
     {
-        $forums= Forums::find($id);
-        return view('user.forums.edit', compact('forums'));
+        // $comments = CommentsForums::all()->where('forum_id',$forums->id);
+        $forums = Forums::paginate(4);
+        $kategori = Kategori::all();
+        return view('user.forum.index', compact('forums','comments','kategori'));
     }
+    public function reply_comment(Request $request)
+    {   
+        $messages = [
+            'required' => ':attribute wajib diisi',
+        ];
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $forums= Forums::find($id);
-        $forums->update($request->all());
-        return redirect()->route('user.forums.index');
+        $this->validate($request,[
+            'comment_id' => 'required'
+            
+        ],$messages);
+
+        $forums = ReplyComments::create([
+            'comments_forums_id' => $request->comment_id,
+            'content' => $request->reply_content,
+            'user_id' => auth()->user()->id
+        ]);
+        return redirect()->back()->with('sukses', 'forum berhasil ditambahkan');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy_comments_forums(Request $request)
     {
-        $forums= Forums::find($id);
-        if(!$forums){
-            return redirect()->back();
-        }
-        $forums->delete();
-        return redirect()->route('user.forums.index');
+        $rc = ReplyComments::find($request->comments_forums_id);
+        $rc->delete();
+        return redirect()->back()->with('sukses', 'Artikel berhasil dihapus');
     }
 }
+
+

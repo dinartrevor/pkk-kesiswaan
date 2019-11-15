@@ -25,9 +25,16 @@ class Artikel extends Model
             ]
         ];
     }
-
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     public function kategori()
     {
-        return $this->belongsTo('App\Kategori');
+        return $this->belongsTo(Kategori::class);
     }
+     public function coments_article()
+     {
+        return $this->hasMany(ComentsArticle::class);
+     }
 }

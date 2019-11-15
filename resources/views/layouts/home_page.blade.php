@@ -22,17 +22,20 @@
         <header class="default-header">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
-                    <a class="navbar-brand" href="/" style="font-weight: 500;"><img src="{{ asset('images/pi.jpeg') }}" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional</a>
+                    <a class="navbar-brand" href="/" style="font-weight: 500;">
+                      <img src="{{ asset('images/pi.jpeg') }}" alt="" style="width: 50px;"> &nbsp;&nbsp;SMK Prakarya Internasional
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="active"><a href="#home">Beranda</a></li>
-                            <li><a href="/artikel">Artikel</a></li>
-                            <li><a href="/tentang">Tentang</a></li>
-                            <li><a href="/ekstrakulikuler">Ekstrakurikuler</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li class="active"><a class= " navbar-btn" href="/login"style="width:10px;">Login &nbsp;<i class="fa fa-sign-in navbar-btn"  aria-hidden="true" style="width:1px;"></i></a></li>
-                        </ul>
+                      <ul class="navbar-nav">
+                        <li class="active"><a href="#home">Beranda</a></li>
+                        <li><a href="{{url('/articles')}}">Artikel</a></li>
+                        <li><a href="/ekstrakulikuler">Ekstrakurikuler</a></li>
+                        <li><a href="/forum">Forum</a></li>
+                        <li><a href="/tentang">Tentang</a></li>
+                        <li class="active">
+                          <ul><a href="/login"style="width:10px;">Login</a></li>
+                      </ul>
                     </div>						
                 </div>
             </nav>
@@ -65,28 +68,24 @@
               </div>
             </div>
             <div class="col-lg-3  col-md-12">
-                <div class="single-footer-widget mail-chimp">
-                  <h6 class="mb-20">Acara</h6>
-                  <ul class="footer-nav">
-                    <li><a href="#">HUT-RI</a></li>
-                    <li><a href="#">Pentas Seni</a></li>
-                    <li><a href="#">Pekan Olahraga</a></li>
-                    <li><a href="#">Donor Darah</a></li>
-                  </ul>
-                </div>
-              </div>						
+              <div class="single-footer-widget mail-chimp">
+                <h6 class="mb-20">Kategori Artikel</h6>
+                <ul class="footer-nav">
+                  @foreach ($kategori as $item)
+                      
+                  
+                <li>{{$item->nama_kategori}}</a></li>
+
+                  @endforeach
+                </ul>
+              </div>
+            </div>						
           </div>
   
           <div class="row footer-bottom d-flex justify-content-between">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             <p class="col-lg-8 col-sm-12 footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | by <a href="https://colorlib.com" target="_blank">Koala Development</a></p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <div class="col-lg-4 col-sm-12 footer-social">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-dribbble"></i></a>
-              <a href="#"><i class="fa fa-behance"></i></a>
-            </div>
           </div>
         </div>
       </footer>

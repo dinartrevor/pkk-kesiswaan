@@ -40,7 +40,8 @@
       </li>
       <li class="{{Request::is('kategori')?'active':''}}"><a href="/kategori"><i class="fa fa-tags"></i> <span>Category</span></a></li>
       <li><a href="#"><i class="fa fa-users"></i> <span>Ekstrakurikuler</span></a></li>
-
+      <li><a href="/forums"><i class="fa fa-users"></i> <span>Forums</span></a></li>
+      <li><a href="/"><i class="fa fa-circle-o"></i>Lihat User</a></li>
     </ul>
     <!-- /.sidebar-menu -->
   </section>

@@ -35,7 +35,7 @@
             @endif
           </div>
           <div class="form-group">
-            <button class="btn btn-primary btn-flat" type="submit" style="float: right; width: 20%" name="simpan" value="active">Upload</button>
+            <button class="btn btn-primary btn-flat" type="submit" style="float: right; width: 20%" name="simpan" value="publish">Upload</button>
           </div>
           <div class="form-group">
             <button class="btn btn-default btn-flat" type="submit" style="float: right; width: 20%; margin-right: 5px" name="simpan" value="draft">Draft</button>

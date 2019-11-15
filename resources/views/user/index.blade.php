@@ -30,30 +30,16 @@
 			</div>
 		</div>						
 		<div class="active-cat-carusel">
+			@foreach ($artikel_random as $item)
 			<div class="card mr-4">
 				<div class="item single-cat">
-					<a href="/detail-events"><img src="{{ asset('images/74.jpg') }}" alt="" height="210px"></a>
-					<p class="date">10 Jan 2018</p>
-					<h4><a href="/detail-events">HUT RI Ke-74</a></h4>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
+					<a href="{{url('/artikel/show/'.$item->id)}}"><img src="{{asset($item->thumbnail) }}" alt="" height="210px"></a>
+				<p class="date">{{ $item->created_at->diffForHumans()}}</p>
+					<h4><a href="{{url('/artikel/show/'.$item->id)}}">{{$item->judul}}</a></h4>
+					<p>{!! str_limit($item ->konten, $limit = 50, $end = '...........') !!}</p>
 				</div>
-			</div>
-			<div class="card mr-4">
-				<div class="item single-cat">
-					<a href=""><img src="{{ asset('images/demo-eskul.jpg') }}" alt="" height="210px"></a>
-					<p class="date">10 Jan 2018</p>
-					<h4><a href="#">Demonstrasi Ekstrakurikuler</a></h4>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
-				</div>
-			</div>
-			<div class="card mr-4">
-				<div class="item single-cat">
-					<a href=""><img src="{{ asset('images/porak.jpg') }}" alt="" height="210px"></a>
-					<p class="date">10 Jan 2018</p>
-					<h4><a href="#">Pekan Olahraga Nasional </a></h4>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ratione architecto quo quas</p>
-				</div>
-			</div>							
+			</div>		
+			@endforeach				
 		</div>												
 	</div>	
 </section>
@@ -70,56 +56,19 @@
 			</div>
 		</div>						
 		<div class="row">
-			<div class="col-lg-6 travel-left">
-				<div class="single-travel media pb-70">
-					<img class="img-fluid d-flex  mr-3" src="{{ asset('images/porak.jpg') }}" width="200px" height="200px"alt="">
-					<div class="dates">
-					<span>01</span>
-					<p>Dec</p>
-					</div>
-					<div class="media-body align-self-center">
-					<h4 class="mt-0"><a href="#">Pekan Olahraga Nasional</a></h4>
-					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>							 
-					</div>
+			@foreach ($artikel as $art)
+				<div class="col-md-6">
+					<div class="single-travel media pb-70">
+						<img class="img-fluid d-flex  mr-3" src="{{asset($art->thumbnail) }}" width="200px" height="500px"alt="">
+						<div class="media-body align-self-center">
+						<h4 class="mt-0"><a href="{{url('/artikel/show/'.$item->id)}}">{{$art->judul}}</a></h4>
+						<p>{!! str_limit($item ->konten, $limit = 50, $end = '  ...........') !!}</p>							 
+						</div>
+					</div>								
 				</div>
-				<div class="single-travel media">
-					<img class="img-fluid d-flex  mr-3" src="{{ asset('images/pentas-seni.jpg') }}" width="200px" height="200px" alt="">
-					<div class="dates">
-					<span>01</span>
-					<p>Nov</p>
-					</div>							  
-					<div class="media-body align-self-center">
-					<h4 class="mt-0"><a href="#">Pentas Seni SMK PI</a></h4>
-					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>							
-					</div>
-				</div>														
-			</div>
-			<div class="col-lg-6 travel-right">
-				<div class="single-travel media pb-70">
-					<img class="img-fluid d-flex  mr-3" src="/images/74.jpg" alt="" width="250px" height="500px">
-					<div class="dates">
-					<span>17</span>
-					<p>Agu</p>
-					</div>							  
-					<div class="media-body align-self-center">
-					<h4 class="mt-0"><a href="/detail-events">Hut Republik Indonesia Ke 74</a></h4>
-					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-					</div>
-				</div>
-				<div class="single-travel media">
-					<img class="img-fluid d-flex  mr-3" src="/images/74.jpg" alt="" width="250px" height="500px">
-					<div class="dates">
-					<span>20</span>
-					<p>Dec</p>
-					</div>							  
-					<div class="media-body align-self-center">
-					<h4 class="mt-0"><a href="#">Addiction When Gambling
-					Becomes A Problem</a></h4>
-					<p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-					</div>
-				</div>								
-			</div>
-			<a href="acara.html" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tampilkan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>		
+			@endforeach
+			<div class="clearfix"></div>
+			<a href="/articles" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tampilkan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>		
 		</div>
 	</div>					
 </section>
