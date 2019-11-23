@@ -41,8 +41,11 @@
 					<div class="row height align-items-center justify-content-center">
 						<div class="col-lg-10">
 							<div class="generic-banner-content">
-								<h2 class="text-white text-center">Koala Development</h2>
-								<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nostrum eaque impedit corrupti dolore voluptates, dolorem porro quo cupiditate, quis maxime sed soluta officiis, non ad similique distinctio velit error!</p>
+								<h2 class="text-white text-center mb-5">Koala Development</h2>
+								<div class="text-white" style="width: 400px; margin-left: 30%">
+									<p style=" font-size: 20px; text-align: justify; line-height: 30px; font-family:cursive">“I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it."</p>
+									<p style="text-align: right">--Bill Gates--</p>
+								</div>
 							</div>							
 						</div>
 					</div>

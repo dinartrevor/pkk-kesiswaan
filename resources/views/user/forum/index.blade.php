@@ -11,7 +11,7 @@
       <div class="col-lg-8">
             <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-uppercase primary-btn loadmore-btn mb-20" style="color:white;">Ajukan Pertanyaan</a>
 				<div class="post-lists search-list">
-					@foreach ($forums as $item)
+					z@foreach ($forums as $item)
 						<div class="single_widget recent_widget" style="padding: 0;">
 							<div class="single-list flex-row d-flex" style="padding: 0;">
 								<div class="thumb">

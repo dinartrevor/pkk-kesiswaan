@@ -32,7 +32,7 @@
         </div>
         <div class="info-box-content">
           <a href="{{ url('/extracurricular/show-extracurricular/'.$ex->id) }}"><span class="info-box-text">{{$ex->name}}</span></a>
-          <span class="info-box-number">1,410</span>
+          <span class="info-box-number"></span>
         </div>
       </div>
     </div>

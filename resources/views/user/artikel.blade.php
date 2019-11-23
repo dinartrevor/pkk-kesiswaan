@@ -9,7 +9,8 @@
   <div class="row justify-content-center d-flex">
       <div class="col-lg-8">
 				<div class="post-lists search-list">
-					@foreach ($artikel as $item)
+                        @if(count($artikel) >= 1)
+					    @foreach ($artikel as $item)
 						<div class="single_widget recent_widget" style="padding: 0;">
 							<div class="single-list flex-row d-flex" style="padding: 0;">
 								<div class="thumb">
@@ -26,7 +27,7 @@
 									<p class="mt-20 title text-lowercase">
 										<i class="fa fa-users" aria-hidden="true"></i>
 										{{$item->kategori->nama_kategori }}
-										<i class="ml-20 fa fa-comment-o" aria-hidden="true"></i>
+										<i class="ml-20 fa fa-comment-o" ></i>
 										{{$item->coments_article()->count() > 0 ? $item->coments_article()->count() : 'Tidak Ada'}}
 									</p>
 								</div>
@@ -35,10 +36,38 @@
 								</div>
 							</div>
 						</div>
-						@endforeach
+                        @endforeach
+                        @else
+                        <div class="single_widget recent_widget" style="padding: 0;">
+                                <div class="single-list flex-row d-flex" style="padding: 0;">
+                                    <div class="thumb">
+                                            <div class="date" style="background-color: #222222b8 !important; height: 85px; width: 75px; font-size:15px;">
+                                                    <p>Kosong</p>
+                                            </div>
+                                            {{-- <a href="{{url('/artikel/show/'.$item->id)}}"><img class="img-responsive" src="{{ asset($item->thumbnail) }}" alt="" width="150px" height="150px"></a> --}}
+                                    </div>
+                                    <div class="detail mr-20">
+                                        <h4 class="pb-20 text-capitalize">kosong</h4>
+                                        <p>
+                                            {{-- {!! str_limit($item ->konten, $limit = 50, $end = '...') !!} --}}
+                                        </p>
+                                        <p class="mt-20 title text-lowercase">
+                                            {{-- <i class="fa fa-users" aria-hidden="true"></i>
+                                            {{$item->kategori->nama_kategori }}
+                                            <i class="ml-20 fa fa-comment-o" ></i>
+                                            {{$item->coments_article()->count() > 0 ? $item->coments_article()->count() : 'Tidak Ada'}} --}}
+                                        </p>
+                                    </div>
+                                    <div class="footer pt-100 mr-50" style="margin-left: auto;">
+                                        {{-- <a href="{{url('/artikel/show/'.$item->id)}}" class="text-uppercase primary-btn loadmore-btn" style="color:white;">Baca</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        @endif          
               <div class="justify-content-center d-flex">
                  {{$artikel->links()}}
-              </div>                                                                     
+              </div>    
+                                                  
           </div>                          
       </div>
       <div class="col-lg-4 sidebar-area">
@@ -52,7 +81,7 @@
                 <img src="{{asset($terbaru->thumbnail) }}" alt="" width="200px" height="250px">
                     <p class="mt-20 title text-uppercase">{{$terbaru->judul}}</p>
                     <p>{{ $terbaru->created_at->diffForHumans() }}<span>
-                    {{$terbaru->kategori->nama_kategori}} <i class="fa fa-comment-o" aria-hidden="true"></i> {{$item->coments_article()->count() > 0 ? $item->coments_article()->count() : 'Tidak Ada'}}</span></p>    
+                    {{$terbaru->kategori->nama_kategori}} <i class="fa fa-comment-o" aria-hidden="true"></i> {{$terbaru->coments_article()->count() > 0 ? $item->coments_article()->count() : 'Tidak Ada'}}</span></p>    
                 </div>   
                 @endforeach                                                                         
             </div>
@@ -62,7 +91,9 @@
             <ul>
                 @foreach ($kategori as $item)
                     <li>
-                        <a href="#">{{$item->nama_kategori}} <span>{{$item->artikel_count}}</span></a>
+                        <a href="/articles?category={{ $item->id }}">
+                            {{$item->nama_kategori}} <span>{{$item->artikel_count}}</span>
+                        </a>
                     </li>
                 @endforeach
             </ul>

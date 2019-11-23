@@ -44,8 +44,7 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,penulis,pengurus']], fun
 
 Route::group(['middleware' => ['auth', 'checkRole:admin,penulis,pengurus,user']], function () {
     // comment article
-    Route::post('/comment/{artikel}/add-comment', 'commentArticleController@store')->name('addComent');
-<<<<<<< HEAD
+    
 
     // Ekskul
     Route::get('/extracurricular', 'ExtracurricularController@index');
@@ -55,31 +54,24 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,penulis,pengurus,user']]
     Route::post('/extracurricular/edit-extracurricular/{extracurricular}/update-extracurricular', 'ExtracurricularController@update')->name('extracurricular.update');
     Route::get('/extracurricular/delete-extracurricular/{extracurricular}', 'ExtracurricularController@destroy');
     Route::get('/extracurricular/show-extracurricular/{extracurricular}', 'ExtracurricularController@show')->name('extracurricular.show');
-=======
-    Route::post('/comment/{forums}/add-forumComment', 'CommentsForumsController@store')->name('addComent');
+
+    // forums
+    Route::post('/comment/{forums}/add-forumComment', 'CommentsForumsController@store')->name('forum.addComent');
     Route::post('/forums/reply_comment', 'ForumsController@reply_comment')->name('reply_comment');
     Route::get('/forums/destroy_comments_forums/{comments_forums_id}', 'ForumsController@destroy_comments_forums')->name('destroy_comments_forums');
     Route::post('/forums/store','ForumsController@store')->name('addforums');
->>>>>>> origin
+    Route::post('/comment/{artikel}/add-comment', 'commentArticleController@store')->name('addComent');
 });
 
 // User
+
 Route::get('/forums/show/{forums}', 'ForumsController@show');
 Route::get('/artikel/show/{artikel}', 'ArtikelController@show');
 
 Route::get('/', function () {
     return view('user.index');
 });
-<<<<<<< HEAD
-Route::get('/events', function () {
-    return view('user.events');
-});
-Route::get('/ekskul', function () {
-    return view('user.eskul');
-});
-=======
 Route::get('/', 'ArtikelController@homeUser');
->>>>>>> origin
 Route::get('/tentang', function () {
     return view('user.tentang');
 });

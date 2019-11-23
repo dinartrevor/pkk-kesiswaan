@@ -55,7 +55,7 @@
                                 <h5 class="text-uppercas pb-50">Tinggalkan pesan</h5>
                                 <div class="row flex-row d-flex">
                                     <div class="col-lg-12">
-                                      <form class="form"action="{{ route('addComent', $forums) }}" method="POST">
+                                      <form class="form" action="{{ route('forum.addComent', $forums) }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                           <label>Komentar</label>

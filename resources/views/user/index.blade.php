@@ -34,9 +34,14 @@
 			<div class="card mr-4">
 				<div class="item single-cat">
 					<a href="{{url('/artikel/show/'.$item->id)}}"><img src="{{asset($item->thumbnail) }}" alt="" height="210px"></a>
-				<p class="date">{{ $item->created_at->diffForHumans()}}</p>
+					<p class="date">{{ $item->created_at->diffForHumans()}}</p>
 					<h4><a href="{{url('/artikel/show/'.$item->id)}}">{{$item->judul}}</a></h4>
-					<p>{!! str_limit($item ->konten, $limit = 50, $end = '...........') !!}</p>
+					<div class="mt-5">
+						<i class="fa fa-tag" aria-hidden="true"></i>
+						{{$item->kategori->nama_kategori }}
+						<i class="ml-20 fa fa-user" ></i>
+						{{$item->user->name}}
+					</div>
 				</div>
 			</div>		
 			@endforeach				
@@ -51,7 +56,7 @@
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-8">
 				<div class="title text-center">
-					<h1 class="mb-10">Events News</h1>
+					<h1 class="mb-10">Acara</h1>
 				</div>
 			</div>
 		</div>						
@@ -86,35 +91,15 @@
 			</div>
 		</div>					
 		<div class="row">
+			@foreach ($extracurricular as $ex)
+				
+
 			<div class="col-lg-3 col-md-6 single-fashion">
-				<a href="paskibra.html"><img class="img-fluid" src="/images/paskib.jpg" alt=""></a>
-				<h4 style="margin-top: 15px;"><a href="paskibra.html">PASKIBRA</a></h4>
-				<p>
-					Pasukan Kibaran Bendera 
-				</p>
+				<a href="{{ url('/members/'.$ex->id) }}"><img class="img-fluid" src="/images/dummy-eskul.jpeg" alt=""></a>
+			<h4 style="margin-top: 15px;"><a href="{{ url('/members/'.$ex->id) }}">{{$ex->name}}</a></h4>
 			</div>
-			<div class="col-lg-3 col-md-6 single-fashion">
-				<a href="marching-band.html"><img class="img-fluid" src="/images/marching.jpg" alt=""></a>
-			<h4 style="margin-top: 15px;"><a href="">MARCHING BAND</a></h4>
-				<p>
-					Tukang Tatalu
-				</p>
-			</div>
-			<div class="col-lg-3 col-md-6 single-fashion">
-				<a href="pramuka.html"><img class="img-fluid" src="/images/pramuka.jpg" alt=""></a>
-				<h4 style="margin-top: 15px;"><a href="pramuka.html">PRAMUKA</a></h4>
-				<p>
-					Praja Muda Karana
-				</p>
-			</div>
-			<div class="col-lg-3 col-md-6 single-fashion">
-				<a href="osis.html"><img class="img-fluid" src="/images/osis.jpg" alt=""></a>
-				<h4 style="margin-top: 15px;"><a href="osis.html">OSIS</a></h4>
-				<p>
-					Oraganisai Siswa Intra Sekolah
-				</p>
-			</div>	
-			<a href="ekstrakulikuler.html" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tamplikan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>						
+			@endforeach
+			<a href="/members" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Tamplikan Lebih Banyak <i class="fa fa-chevron-circle-down" style="color: white; transform: translate(5px, 0)"></i></a>						
 		</div>
 	</div>	
 </section>

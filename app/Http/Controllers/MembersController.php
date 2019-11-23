@@ -11,48 +11,50 @@ use App\ExtracurricularStudent;
 
 class MembersController extends Controller
 {
-	public function index()
-	{
-		$extracurricular = Extracurricular::all();
-		return view('admin.members.index', compact('extracurricular'));
-	}
-	
-	public function create(Extracurricular $extracurricular)
-	{
-		return view('admin.members.newMembers', compact('extracurricular'));
-	}
+    public function index()
+    {
+        $extracurricular = Extracurricular::all();
+        return view('user.eskul.index', compact('extracurricular'));
+    }
+    
+    public function create(Extracurricular $extracurricular)
+    {
+        return view('user.eskul.detail_eskul', compact('extracurricular'));
+    }
 
-	public function store(Request $request, Extracurricular $extracurricular)
-	{
-		if (auth()->user()) {
-			$students = Students::where('nis', $request->nis)->first();
-			$members = ExtracurricularStudent::create([
-				'students_id' => $students->id,
-				'extracurriculars_id' => $extracurricular->id
-			]);
-			return redirect()->back()->with('sukses', 'Anda telah terdaftar sebagai anggota '.$extracurricular->name);
-		}else{
-			return redirect('/');
-		}
-	}
+    public function store(Request $request, Extracurricular $extracurricular)
+    {
+        if (auth()->user()) {
+            $students = Students::whereNis($request->nis)->first();
+            if ($students) {
+                $members = $students->extracurricular_student()->create(['extracurriculars_id' => $extracurricular->id]);
+                return redirect()->back()->with('sukses', '	Anda telah terdaftar sebagai anggota '.$extracurricular->name);
+            } else {
+                return redirect()->back()->with('error', '	NIS tidak ada');
+            }
+            
+        }else{
+            return redirect('/');
+        }
+    }
 
-	public function show($id)
-	{
-			//
-	}
+    public function show($id)
+    {
+            //
+    }
 
-	public function edit($id)
-	{
-			//
-	}
+    public function edit($id)
+    {
+            //
+    }
 
-	public function update(Request $request, $id)
-	{
-			//
-	}
+    public function update(Request $request, $id)
+    {
+            //
+    }
 
-	public function destroy($id)
-	{
-			//
-	}
+    public function destroy($id)
+    {
+            //
+    }
 }

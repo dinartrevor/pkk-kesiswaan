@@ -44,17 +44,18 @@ class ForumsController extends Controller
     }
     public function show(Forums $forums)
     {
-        $comments = CommentsForums::all()->where('forums_id',$forums->id);
+        // $comments = CommentsForums::where('forums_id', $forums->id)->orderBy('created_at', 'DESC');
+        $comments = $forums->forums_comments;
         $kategori = Kategori::all();
-        $forum_comment = Forums::orderBy('id','DESC')->get();
+        // $forum_comment = Forums::orderBy('id','DESC')->get();
         // $kategori=Kategori::withCount('Artikel')->get();
         // $artikel_terbaru=Artikel::orderBy('id', 'DESC')->limit(2)->get();
-        return view('user.forum.detail_forums', ['forums'=>$forums, 'comments'=>$comments, 'kategori'=>$kategori, 'forum_comment'=>$forum_comment]);
+        return view('user.forum.detail_forums', ['forums'=>$forums, 'comments'=>$comments, 'kategori'=>$kategori]);
     }
     public function forumUser(Forums $forums)
     {
         // $comments = CommentsForums::all()->where('forum_id',$forums->id);
-        $forums = Forums::paginate(4);
+        $forums = Forums::orderBy('created_at', 'DESC')->paginate(4);
         $kategori = Kategori::all();
         return view('user.forum.index', compact('forums','comments','kategori'));
     }

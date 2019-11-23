@@ -8,12 +8,13 @@ use App\Artikel;
 use App\Kategori;
 use App\ComentsArticle;
 use Session;
+use App\Extracurricular;
 use Illuminate\Support\Str;
 class ArtikelController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $artikel = Artikel::all()->where('user_id', auth()->user()->id);
+        $artikel = auth()->user()->artikel;
         return view('admin.artikel.index', compact('artikel'));
     }
 
@@ -99,10 +100,13 @@ class ArtikelController extends Controller
         $artikel_terbaru=Artikel::orderBy('id', 'DESC')->limit(2)->get();
         return view('user.detail_artikel', ['artikel'=>$artikel, 'coment'=>$coment, 'kategori'=>$kategori, 'artikel_terbaru'=>$artikel_terbaru,]);
     }
-    public function user(Artikel $artikel)
+    public function user(Request $request, Artikel $artikel)
     {
         $coment = ComentsArticle::all()->where('artikel_id',$artikel->id);
-        $artikel = Artikel::paginate(4);
+        $artikel = Artikel::orderBy('created_at', 'DESC')->paginate(4);
+        if ($request->category) {
+            $artikel = Artikel::where('kategori_id', $request->category)->orderBy('created_at', 'DESC')->paginate(4);
+        }
         $kategori = Kategori::all();
         $kategori=Kategori::withCount('Artikel')->get();
         $artikel_terbaru=Artikel::orderBy('id', 'DESC')->limit(2)->get();
@@ -114,8 +118,10 @@ class ArtikelController extends Controller
         $artikel = Artikel::limit(4)->get();
         $kategori = Kategori::all();
         $kategori=Kategori::withCount('Artikel')->get();
+        $extracurricular = Extracurricular::all();
         $artikel_random=Artikel::orderBy('id', 'DESC')->limit(3)->get();
-        return view('user.index', compact('artikel','kategori','artikel_random','coment'));
+        
+        return view('user.index', compact('artikel','kategori','artikel_random','coment','extracurricular'));
         
     }
 

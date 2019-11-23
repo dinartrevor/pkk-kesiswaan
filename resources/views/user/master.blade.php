@@ -25,12 +25,28 @@
             <ul class="navbar-nav">
               <li class="active"><a href="/">Beranda</a></li>
               <li><a href="{{url('/articles')}}">Artikel</a></li>
-              <li><a href="/ekstrakulikuler">Ekstrakurikuler</a></li>
+              <li><a href="/members">Ekstrakurikuler</a></li>
               <li><a href="/forum">Forum</a></li>
               <li><a href="/tentang">Tentang</a></li>
+              @if (auth()->user())
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    {{ Auth::user()->name }}
+                </a>
+                <div class="dropdown-menu">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">
+                        Sign out
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+                </div>
+              </li> 
+              @else     
               <li class="active">
                 <ul><a href="/login"style="width:10px;">Login</a></li>
-            </ul>
+                </ul>
+                @endif
           </div>						
         </div>
       </nav>

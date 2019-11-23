@@ -24,6 +24,7 @@ class commentArticleController extends Controller
 
     public function store(Request $request, Artikel $artikel)
     {
+        
         ComentsArticle::create([
             'artikel_id' => $artikel->id,
             'user_id' =>auth()->user()->id,

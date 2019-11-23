@@ -15,6 +15,6 @@ class Forums extends Model
     }
     public function forums_comments()
     {
-        return $this->hasMany(CommentsForums::class);
+        return $this->hasMany(CommentsForums::class)->orderBy('created_at', 'desc');
     }
 }
