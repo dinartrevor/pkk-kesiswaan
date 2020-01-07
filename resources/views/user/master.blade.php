@@ -62,7 +62,9 @@
                 <a href="/"><h6>SMK PRAKARYA INTERNASIONAL</h6></a>
               <ul class="footer-nav">
                 <li><a href="/events">Acara</a></li>
+                <li><a href="/articles">Artikel</a></li>
                 <li><a href="/ekskul">Ekstrakurikuler</a></li>
+                <li><a href="/forum">Forum</a></li>
                 <li><a href="/tentang">Tentang</a></li>
                 <li><a href="/login">login</a></li>
               </ul>
@@ -83,7 +85,13 @@
               <div class="single-footer-widget mail-chimp">
                   <h6 class="mb-20">Kategori Artikel</h6>
                   <ul class="footer-nav">
-                  
+                    @foreach ($kategori as $k)
+                      <li>
+                        <a href="/articles?category={{ $k->id }}">
+                           {{$k->nama_kategori}}
+                        </a>
+                      </li>
+                    @endforeach
                   </ul>
                 </div>
             </div>						
@@ -98,6 +106,7 @@
     </footer>
 
     <script src="/asset-user/js/vendor/jquery-2.2.4.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="/asset-user/js/vendor/bootstrap.min.js"></script>
     <script src="/asset-user/js/jquery.ajaxchimp.min.js"></script>
@@ -107,6 +116,8 @@
     <script src="/asset-user/js/jquery.sticky.js"></script>
     <script src="/asset-user/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> --}}
+    
     <script>
       @if (Session::has('sukses'))
         toastr.success("{{Session::get('sukses')}}", "Sukses")

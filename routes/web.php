@@ -83,5 +83,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     '\vendor\uniSharp\LaravelFilemanager\Lfm::routes()';
 });
 Route::get('/articles', 'ArtikelController@user');
+Route::get('/cari', 'ArtikelController@cari')->name('cari');
+Route::get('/cari_artikel', 'ArtikelController@cariArtikel')->name('cari_artikel');
 Route::get('/forum', 'ForumsController@forumUser');
 
